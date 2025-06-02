@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Barbell Pronated Row</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="proceed.css">
+        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+          <div id="header-placeholder"></div>
+          <div class="content-wrapper">
+            <h1>Create a Routines</h1>
+            <div class="routines-wrapper">
+                <div class="cart-item">
+                    <input type="checkbox" />
+                    <div class="item-image"><img src="img/Barbell Bench Press.webp"></div>
+                    <div class="item-title">Barbell Bench Press</div>
+                    <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
+                  </div>
+                
+                  <div class="cart-item">
+                    <input type="checkbox" checked />
+                    <div class="item-image"><i class="fa-regular fa-image"></i></div>
+                    <div class="item-title">Barbell Bench Press</div>
+                    <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
+                  </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="Routines_Name">Name Your Routines : </label>
+                <input type="Routines_Name" id="Routines_Name" name="Routines_Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Discription">Discription :</label>
+                <textarea id="Discription" name="Discription" rows="2" style="resize: both;" required></textarea>
+              </div>
+
+            <div class="hr"></div>
+
+              <div class="proceed-button-wrapper">
+                <a href="routine.html"><button class="proceed-button">Proceed</button></a>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+            </footer>
+            </main>
+          </div>
+
+          <script> 
+            fetch('header.html.erb')
+                .then(response => response.text()) 
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.log('Error loading header:', error));
+        </script>
+    </body>
+</html>

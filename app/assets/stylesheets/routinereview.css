@@ -1,0 +1,76 @@
+.routine-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    height:700px;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  .routine-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 20px;
+  }
+  
+
+
+  .routine-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color:#E0E0E0 ;
+  }
+
+  .routine-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin: 10px 0;
+  }
+
+  .action-box {
+    background-color: #d9d9d9;
+    height: 100px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 2px solid transparent;
+  }
+
+  .action-box:focus {
+    outline: none;
+    border-color: #00aaff;
+  }
+
+  .description-box {
+    background-color: #222;
+    height: 120px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+    resize: none;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+.button-group button a{
+  text-decoration: none;
+  color: #000000;
+}
+  .btn {
+    background-color: #d6ff00;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }

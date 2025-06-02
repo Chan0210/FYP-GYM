@@ -1,0 +1,76 @@
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-buttons button {
+    flex: 1;
+    padding: 10px 0;
+    background-color: #eaff00;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  
+  .history-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .history-date {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .history-card {
+    background-color: #1d1d1d;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .history-card a{
+      text-decoration: none;
+  }
+  
+  .routine-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .routine-info strong {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .routine-details {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .routine-details span {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    color: #fff;
+  }
+  

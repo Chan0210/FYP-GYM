@@ -1,0 +1,152 @@
+.content-wrapper h1{
+    color: #E1FF00;
+    margin-left: 20px;
+}
+
+  .section-container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .youtube-section {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    width: 100%; 
+    padding-bottom: 56.25%; /* 16:9 的纵横比保持不变 */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-box {
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 300px;
+  }
+  
+  .video-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .video-player {
+    width: 48%;
+    border-radius: 8px;
+  }
+  
+  .instruction-list {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .step-number .num {
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    font-size: 12px;
+    color: white;
+  }
+
+  .instruction-item p {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 13px;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #121212;
+    border-radius: 12px;
+    height: 50px;
+  }
+
+
+  
+  .add-button {
+    position: static;
+    top: auto; /* 确保顶部不干扰 */
+    bottom:20px; /* 保持底部位置 */
+    right: 20px;
+    background-color: #d2f800;
+    color: #000;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+  }
+  
+  .add-button:hover {
+    background-color: #c4e100;
+  }
+
+  .description-box {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+    margin-top: 30px;
+  }
+  
+  .description-box h2 {
+    color: #d2f800;
+    margin-bottom: 10px;
+  }
+  
+  .description-box strong{
+    color: #FFFFFF;
+    font-size: 23px;
+  }
+
+  .description-box p{
+    color: #FFFFFF;
+  }
+
+  .description-box h3{
+    color: #FFFFFF;
+  }

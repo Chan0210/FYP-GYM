@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tracking Page</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="trackingedit.css">
+        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <div class="content-wrapper">
+        <div class="container">
+            <h1>Track Your Routine</h1>
+            <div class="card">
+              <div class="top-row">
+                <div class="field">
+                  <label for="date">Date :</label>
+                  <input type="text" id="date" />
+                </div>
+                <div class="field">
+                  <label for="time">Time used :</label>
+                  <input type="text" id="time" />
+                </div>
+              </div>
+        
+              <div class="action-box">
+                <span>Action 1</span>
+                <div class="set-input">
+                  <label>Enter times of Set :</label>
+                  <input type="text" />
+                </div>
+              </div>
+        
+              <div class="action-box">
+                <span>Action 2</span>
+                <div class="set-input">
+                  <label>Enter times of Set :</label>
+                  <input type="text" />
+                </div>
+              </div>
+        
+              <div class="action-box">
+                <span>Action 3</span>
+                <div class="set-input">
+                  <label>Enter times of Set :</label>
+                  <input type="text" />
+                </div>
+              </div>
+        
+              <div class="button-wrapper">
+                <button class="done-button"><a href="routine_detail.html">Done</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script> 
+            fetch('header.html')
+                .then(response => response.text()) 
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.log('Error loading header:', error));
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,126 @@
+.content-wrapper h1{
+    color: #E1FF00;
+}
+
+/* Layout for filter and search */
+.action-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px; /* 可选：添加间距 */
+}
+
+.search-bar {
+  flex: 1; /* 让它自动占满剩余空间 */
+  padding: 10px;
+  background-color: #282828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  background-color: #282828;
+  color: #aaa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.filter-dropdown {
+  position: relative;
+  flex-shrink: 0; /* 不被压缩 */
+}
+
+.filter-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #282828;
+  list-style: none;
+  padding: 10px;
+  margin-top: 1px;
+  z-index: 100;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.filter-options li a {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+}
+.filter-options li a:hover{
+  text-decoration: underline;
+}
+
+.filter-dropdown:hover .filter-options {
+  display: block;
+}
+
+/* Action cards */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.action-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 15px;
+  color: #fff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-header span{
+  font-size: 20px;
+}
+  .add-button {
+    background-color: #d2f800;
+    color: #000;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;  
+    transition: background-color 0.3s ease;
+  }
+
+  .add-button:hover {
+    background-color: #c4e100;
+  }
+
+.card-body {
+  background-color: #ccc;
+  height: auto;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card-body img{
+  width: 220px;
+  height: auto; 
+}

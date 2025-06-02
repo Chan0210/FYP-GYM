@@ -1,0 +1,72 @@
+.user-data-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #eaff00;
+  margin-bottom: 30px;
+}
+
+.user-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #e0e0e0;
+  table-layout: fixed;
+}
+
+.user-table th,
+.user-table td {
+  text-align: left;
+  padding: 6px 10px; /* 紧凑的间距 */
+  font-size: 14px;
+  color: #000;
+  word-wrap: break-word;
+}
+
+.user-table th {
+  background-color: #2a2a2a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-table td {
+  background-color: #f3f3f3;
+}
+
+/* 控制列宽 */
+.user-table th:nth-child(1),
+.user-table td:nth-child(1) {
+  width: 60px;
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 150px;
+}
+
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+  width: 240px;
+}
+
+.user-table th:nth-child(4),
+.user-table td:nth-child(4),
+.user-table th:nth-child(5),
+.user-table td:nth-child(5) {
+  width: 90px;
+}
+
+.delete-btn,
+.check-btn {
+  background-color: #777;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.delete-btn:hover,
+.check-btn:hover {
+  background-color: #999;
+}

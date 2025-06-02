@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Work Out History Page</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="work _out_history.css">
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="content-wrapper">
+    <main class="main-content">
+      <h1 class="page-title">Workout History</h1>
+
+      <div class="filter-buttons">
+        <button>Week</button>
+        <button>Month</button>
+        <button>Year</button>
+        <button>All</button>
+      </div>
+
+      <div class="history-section">
+        <div class="history-date">21/4/2025</div>
+        <div class="history-card">
+          <div class="routine-info">
+            <strong>Routine 1</strong>
+            <div class="routine-details">
+              <span>1341 kcal</span>
+              <span>2h 35min</span>
+            </div>
+          </div>
+          <a href="workout_detail.html.erb" class="arrow-link">
+            <div class="arrow">&gt;</div>
+          </a>
+        </div>
+
+        <div class="history-date">16/4/2025</div>
+        <div class="history-card">
+          <div class="routine-info">
+            <strong>Routine 2</strong>
+            <div class="routine-details">
+              <span>1341 kcal</span>
+              <span>2h 35min</span>
+            </div>
+          </div>
+          <a href="workout_detail.html.erb" class="arrow-link">
+            <div class="arrow">&gt;</div>
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <script> 
+            fetch('header.html')
+                .then(response => response.text()) 
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.log('Error loading header:', error));
+        </script>
+  </div>
+</body>
+</html>

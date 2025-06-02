@@ -1,0 +1,48 @@
+.content-wrapper h1{
+    color: #E1FF00;
+}
+
+
+.main-content a{
+    text-decoration: none;
+}
+
+.main-content a h3{
+    color: #fff;
+    font-size: 25px;
+}
+
+.main-content a h3:hover{
+    color: #a5a5a5;
+}
+  
+  .tools-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .tool-card img {
+    width: 800px;
+    height: 400px;
+    background-color: #0c0c0c;
+    border: 0.4px solid rgb(29, 29, 29);
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .tool-card h3 {
+    color: #FDFDFD;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .tools-section {
+    margin-bottom: 100px;
+  }
+
+  p{
+    color: #D2D2D2;
+  }

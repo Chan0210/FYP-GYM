@@ -1,0 +1,183 @@
+.main-content {
+    color: #fff;
+  }
+  
+  .content-wrapper h1{
+    color: #E1FF00;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+  }
+
+.main-content .bmi{
+
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+  }
+
+  .bmi-box {
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 800px;
+    min-height: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #1F1F1F;
+    margin-bottom: 280px;
+    margin-top: 100px;
+  }
+  
+  /* 左边输入区域 */
+  .bmi-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 缩小间距 */
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* 缩小输入框之间的间距 */
+  }
+
+  .form-group label {
+
+    margin-bottom: 4px;
+  }
+
+  .form-group input{
+    border-radius: 6px;
+    width: 80px;
+    height: 30px;
+    background-color: #282828;
+    border: 0.2px solid #696969;
+    color: white;
+    padding-left: 5px;
+  }
+
+  .form-group select {
+    appearance: none;        /* 移除默认样式（不同浏览器行为略有不同） */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    background-color: #282828;
+    border: 0.2px solid #696969;
+    border-radius: 6px;
+    width: 90px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 15px;     /* 给右边箭头一点空间 */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 12px;
+  }
+
+  .form-group select,
+    .form-group input {
+  line-height: 30px;
+}
+  
+  
+  /* 右边结果显示区域 */
+  .bmi-right {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 每一行（上排、下排） */
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* 表单元素 */
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .form-group label{
+    text-align: center;
+    color: #FDFDFD;
+    font-size: 14px;
+  }
+
+  .gender-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 30%;
+    background-color: #E1FF00;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.7;
+    background-color: #E1FF00;
+  }
+  
+  .result-text {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+
+  
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.content-wrapper {
+    position: relative; /* 让子元素绝对定位基于它 */
+    z-index: 1;
+  }
+  
+  .bmi-circle-background {
+    position: absolute;
+    top: 50%;        /* 垂直居中 */
+    left: 50%;       /* 水平居中 */
+    transform: translate(-20%, -60%);
+    width: 600px;
+    height: 600px;
+    background-color: #E1FF00;
+    border-radius: 50%;
+    z-index: -1;      /* 在所有内容后面 */
+    pointer-events: none; /* 避免干扰用户点击操作 */
+  }

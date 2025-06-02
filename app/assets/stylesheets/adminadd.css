@@ -1,0 +1,123 @@
+ .content-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    border: 0.6px solid #5D5D5D;
+    padding: 40px;
+    background-color: #000; /* 背景黑色，与页面一致 */
+    border-radius: 6px;
+  }
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.form-group input  {
+    width: 75%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+select{
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+textarea {
+    width: 75%;
+    padding: 8px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.image-upload {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.image-box {
+    width: 50%;
+    height: 150px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.instruction{
+    margin-top: 5px;
+}
+
+.instruction input  {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.add-btn{
+    background-color: #ff0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #ff0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+ .submit-btn:hover {
+    background-color: #cc0;
+}

@@ -1,0 +1,169 @@
+.content-wrapper h1{
+    color: #E1FF00;
+}
+.calorie-box {
+    max-width: 300px;
+    margin: 40px auto;
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .calorie-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .form-group label {
+    color: #FDFDFD;
+    margin-bottom: 6px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .form-group input{
+    border-radius: 6px;
+    width: 80px;
+    height: 30px;
+    background-color: #282828;
+    border: 0.2px solid #696969;
+    color: white;
+    padding-left: 5px;
+  }
+
+  .form-group select {
+    appearance: none;        /* 移除默认样式（不同浏览器行为略有不同） */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    background-color: #282828;
+    border: 0.2px solid #696969;
+    border-radius: 6px;
+    width: 90px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 15px;     /* 给右边箭头一点空间 */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 12px;
+  }
+
+  
+  .form-submit {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 30%;
+    background-color: #E1FF00;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  button#calculate:hover {
+    opacity: 0.7;
+  }
+  
+  .calorie-divider {
+    height: 1px;
+    background-color: #5b5b5b;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .result-text {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  #calorie-result {
+    font-size: 30px;
+    color: #E1FF00;
+    font-weight: bold;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.calorie-wrapper {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #E1FF00; /* 半透明白色圆圈 */
+    z-index: 0;
+  }
+  
+  .calorie-box {
+    position: relative;
+    z-index: 100; /* 保证表单内容在圆圈上方 */
+  }
+  
+  /* 个别圆圈样式（你可以增加更多） */
+  .circle1 {
+    width: 200px;
+    height: 200px;
+    top: 235px;
+    left: 650px;
+  }
+  
+  .circle2 {
+    width: 290px;
+    height: 290px;
+    top: 510px;
+    right: 600px;
+  }
+  
+  .circle3 {
+    width: 130px;
+    height: 130px;
+    top: 700px;
+    left: 600px;
+  }
+
+  .circle4 {
+    width: 90px;
+    height: 90px;
+    top: 180px;
+    right: 600px;
+  }
+  

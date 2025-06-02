@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Action</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="action.css">
+        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+          <div class="content-wrapper">
+            <h1>Edit Action</h1>
+            <div class="action-controls">
+
+              <div class="filter-dropdown">
+                <button class="filter-btn">Filter <i class="fa-solid fa-sliders"></i></button>
+                <ul class="filter-options">
+                  <li><a href="Chest.html">Chest</a></li>
+                  <li><a href="back.html">Back</a></li>
+                  <li><a href="chest.html">Arm</a></li>
+                  <li><a href="chest.html">Leg</a></li>
+                  <li><a href="chest.html">Shouder</a></li>
+                </ul>
+              </div>
+              <input class="search-bar" type="text" placeholder="Search" />
+            </div>
+
+
+            <div class="actions-grid">
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+
+              <div class="action-card">
+                <div class="card-header">
+                  <span>Machine Pec Fly</span>
+                    <a href="adminedit.html" class="add-button"><i class="fa-solid fa-pen"></i></a>
+                </div>
+                <div class="card-body">
+                  <a href="BBP.html"><img src="img/Barbell Bench Press.webp"/></a>
+                </div>
+              </div>
+            
+              <footer>
+                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+              </footer>
+            </main>
+          </div>
+
+          <script> 
+            fetch('adminheader.html')
+                .then(response => response.text()) 
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.log('Error loading header:', error));
+        </script>
+    </body>
+</html>
