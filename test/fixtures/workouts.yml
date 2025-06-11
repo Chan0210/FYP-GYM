@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  routine: one
+  date: 2025-06-12
+  total_duration: 1
+  total_calories: 1
+  is_completed: false
+
+two:
+  user: two
+  routine: two
+  date: 2025-06-12
+  total_duration: 1
+  total_calories: 1
+  is_completed: false

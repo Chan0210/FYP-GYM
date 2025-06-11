@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workout: one
+  action: one
+  set_completed: 1
+
+two:
+  workout: two
+  action: two
+  set_completed: 1
