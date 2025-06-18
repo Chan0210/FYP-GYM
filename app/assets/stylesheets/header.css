@@ -6,19 +6,35 @@ body {
 
   header {
     background-color: #000;
+    width: 100%;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
   }
+
+header, nav, .wrapper {
+  border: none;
+  box-shadow: none;
+  background-color: #000; /* 确保黑底 */
+}
 
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px; /* 左右留白 */
+    width: 100%;
+    padding: 0 20px;
+    border: none;
   }
 
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    width: 100%;
+  }
+
+  .logo {
+    flex-shrink: 0;
   }
 
   .logo img {
@@ -29,9 +45,8 @@ body {
   .nav-main {
     display: flex;
     align-items: center;
-    flex-grow: 1;
     justify-content: space-between;
-    margin-left: 40px;
+    gap: 40px;
   }
 
   .nav-links {
@@ -41,6 +56,11 @@ body {
     margin: 0;
     padding: 0;
   }
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
 
   .nav-links li a {
     text-decoration: none;
@@ -54,41 +74,42 @@ body {
 
   .auth-buttons {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
   }
 
-  .login-btn {
-    padding: 8px 20px;
-    border: 0.6px solid #7E7E7E;
-    border-radius: 6px;
-    background: #101010;
-    color: #D2D2D2;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
 
-  .login-btn:hover {
-    background-color: #1f1f1f;
+.login-btn {
+  margin-top: 0;
+  margin-left: 12px;
+  background-color: #1a1a1a;
+  color: white;
+  border: 2px solid #1a1a1a;
+}
 
-  }
+.signup-btn {
+  background-color: #f1ff00;
+  color: black;
+  border: 2px solid #f1ff00;
+}
 
-  .signup-btn {
-    padding: 8px 20px;
-    background-color: #E1FF00;
-    color: #000;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: opacity 0.3s ease;
-  }
+.login-btn,
+.signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 80px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
 
-  .signup-btn:hover {
-    opacity: 0.7;
-    background-color: #d5ff00;
-  }
+
 
   @media (max-width: 768px) {
     nav {
@@ -107,15 +128,15 @@ body {
 .nav-links li {
     position: relative;
   }
-  
+
   .has-megamenu {
     position: relative;
   }
-  
+
   .has-megamenu:hover .megamenu {
     display: flex;
   }
-  
+
   .megamenu {
     display: none;
     position: absolute;
@@ -128,47 +149,46 @@ body {
     z-index: 999;
     color: #fff;
   }
-  
+
   .megamenu .menu-column {
     display: flex;
     flex-direction: column;
   }
-  
+
   .menu-column a {
     display: flex;
     align-items: center;
-    gap: 15px; /* 图标和文字之间的间距 */
+    gap: 15px;
     text-decoration: none;
     color: #fff;
     font-size: 14px;
     line-height: 1.5;
     transition: all 0.3s ease;
   }
-  
+
   .menu-column a:hover {
     color: #E1FF00;
   }
-  
+
   .nav-links li:hover ul {
     display: block;
   }
-  
+
   .nav-links li ul li {
     padding: 8px 20px;
   }
-  
+
   .nav-links li ul li a {
     color: #D2D2D2;
     text-decoration: none;
     font-size: 14px;
     display: block;
   }
-  
+
   .nav-links li ul li a:hover {
     background-color: #2a2a2a;
   }
-  
-  /* 确保 Tools 主菜单链接也能 hover */
+
   .nav-links li > a {
     position: relative;
     padding: 5px 0;
@@ -179,9 +199,9 @@ body {
   .content-wrapper {
     max-width: 1200px;
     margin: 40px auto;
-    border: 0.6px solid #5D5D5D;
+    border: 1px solid #5D5D5D;
     padding: 40px;
-    background-color: #000; /* 背景黑色，与页面一致 */
+    background-color: #000;
     border-radius: 6px;
   }
 

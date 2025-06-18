@@ -1,102 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Directory</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="Directory.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Directory</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <body>
-        <header>
-            <div class="wrapper">
-              <nav>
-                <div class="logo">
-                  <a href="mainpage.html"><img src="img/logo.png" alt="GYMWIKI Logo" /></a>
-                </div>
-        
-                <div class="nav-main">
-                    <ul class="nav-links">
-                        <li><a href="action.html">Action</a></li>
-                        <li class="has-megamenu">
-                            <a href="#">Tools</a>
-                            <div class="megamenu">
-                              <div class="menu-column">
-                                <a href="BMI.html">
-                                    <i class="fa-solid fa-weight-scale"></i>
-                                    <strong>BMI Calculator</strong><br>
-                                </a>
-                              </div>
-                              <div class="menu-column">
-                                <a href="calorie.html">
-                                    <i class="fa-solid fa-scale-balanced"></i>
-                                  <strong>Calories Calculator</strong><br>
-                                </a>
-                              </div>
-                            </div>
-                          </li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="Directory.html">Directory</a></li>
-                        <li><a href="#">Routines</a></li>
-                        <li><a href="#">Workout History</a></li>
-                      </ul>
-        
-                  <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Log In</a>
-                    <a href="SignUp" class="signup-btn">Sign Up</a>
-                  </div>
-                </div>
-              </nav>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">
+        <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), "mainpage_path" %>
+      </div>
+
+      <div class="nav-main">
+        <ul class="nav-links">
+          <li><%= link_to 'Action', action_path %></li>
+          <li class="has-megamenu">
+            <a href="#">Tools</a>
+            <div class="megamenu">
+              <div class="menu-column">
+                <%= link_to '/pages/bmi' do %>
+                  <i class="fa-solid fa-weight-scale"></i>
+                  <strong>BMI Calculator</strong><br />
+                <% end %>
+              </div>
+              <div class="menu-column">
+                <%= link_to '/pages/calorie' do %>
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <strong>Calories Calculator</strong><br />
+                <% end %>
+              </div>
             </div>
-          </header>
+          </li>
+          <li><%= link_to 'Cart', '/pages/cart' %></li>
+          <li><%= link_to 'Directory', '/pages/directory' %></li>
+          <li><%= link_to 'Routines', '/pages/routine' %></li>
+          <li><%= link_to 'Workout History', '/pages/work_out_history' %></li>
+        </ul>
 
-          <div class="content-wrapper">
-            <h1>Directory</h1>
-            <div class="directory-container">
-                <input class="search-bar" type="text" placeholder="Search" />
-            
-                <div class="directory-section">
-                  <h2>Muscle</h2>
-                  <div class="muscle-grid">
-                    <div class="muscle-card">
-                        <a href="Chest.html"><img src="img/chest.webp" /></a>
-                    </div>
-                    <div class="muscle-card">
-                        <a href="back.html"><img src="img/back.webp" /></a>
-                    </div>
-                    <div class="muscle-card">
-                        <a href="rm.html"><img src="img/arm.webp" /></a>
-                    </div>
-                    <div class="muscle-card">
-                        <a href="Chest.html"><img src="img/Shoulder.webp" /></a>
-                    </div>
-                    <div class="muscle-card">
-                        <a href="Chest.html"><img src="img/leg.png" /></a>
-                    </div>
-                    <div class="muscle-card">
-                        <img src="img/muscles/chest.png" />
-                      </div>
-                      <div class="muscle-card">
-                        <img src="img/muscles/back.png" />
-                      </div>
-                      <div class="muscle-card">
-                        <img src="img/muscles/shoulders.png" />
-                      </div>
-                      <div class="muscle-card">
-                        <img src="img/muscles/arms.png" />
-                      </div>
-                      <div class="muscle-card">
-                        <img src="img/muscles/legs.png" />
-                      </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-              <footer>
-                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-              </footer>
-            </main>
-          </div>
-          
-    </body>
+        <div class="auth-buttons">
+          <%= link_to 'Log In', '/pages/login', class: 'login-btn' %>
+          <%= link_to 'Sign Up', '/pages/signup', class: 'signup-btn' %>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="content-wrapper">
+  <h1>Directory</h1>
+  <div class="directory-container">
+    <input class="search-bar" type="text" placeholder="Search" />
+
+    <div class="directory-section">
+      <h2>Muscle</h2>
+      <div class="muscle-grid">
+        <div class="muscle-card">
+          <%= link_to image_tag('chest.webp'), '/pages/chest' %>
+        </div>
+        <div class="muscle-card">
+          <%= link_to image_tag('back.webp'), '/back' %>
+        </div>
+        <div class="muscle-card">
+          <%= link_to image_tag('arm.webp'), '/pages/rm' %>
+        </div>
+        <div class="muscle-card">
+          <%= link_to image_tag('Shoulder.webp'), '/pages/chest' %>
+        </div>
+        <div class="muscle-card">
+          <%= link_to image_tag('leg.png'), '/pages/leg' %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+</footer>
+</body>
 </html>

@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Main Page</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="calorie.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Calorie Page</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "calorie", media: "all" %>
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-    <div id="header-placeholder"></div>
+<body>
 
-          <div class="content-wrapper">
-            <h1>Calories Calculator</h1>
-            <main class="main-content">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-                <div class="circle circle4"></div>
-              <div class="calorie-box">
-                <div class="calorie-row">
-                  <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" id="age" />
-                  </div>
-                  <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender">
-                    <option value="" disabled selected hidden></option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                    </select>
-                  </div>
-                </div>
-          
-                <div class="calorie-row">
-                  <div class="form-group">
-                    <label for="height">Height (cm)</label>
-                    <input type="number" id="height" />
-                  </div>
-                  <div class="form-group">
-                    <label for="weight">Weight (kg)</label>
-                    <input type="number" id="weight" />
-                  </div>
-                </div>
-          
-                <div class="calorie-row">
-                  <div class="form-group">
-                    <label for="activity">Activity Level</label>
-                    <select id="activity">
-                        <option value="" disabled selected hidden></option>
-                      <option value="sedentary">Sedentary (little or no exercise)</option>
-                      <option value="light">Light exercise (1-3 days/week)</option>
-                      <option value="moderate">Moderate exercise (3-5 days/week)</option>
-                      <option value="active">Active (6-7 days/week)</option>
-                      <option value="very-active">Very Active (intense daily exercise)</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="goal">Goal</label>
-                    <select id="goal">
-                        <option value="" disabled selected hidden></option>
-                      <option value="lose">Lose Weight</option>
-                      <option value="maintain">Maintain Weight</option>
-                      <option value="gain">Gain Weight</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="form-submit">
-                  <button id="calculate">Calculate</button>
-                </div>
-          
-                <div class="calorie-divider"></div>
-          
-                <div class="result-text">
-                  You would have to consume<br />
-                  <span id="calorie-result">2117</span><br />Calories
-                </div>
-              </div>
-                    <footer>
-                        <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-                    </footer>
-            </main>
-          </div>
-        <script> 
-            fetch('header.html')
-                .then(response => response.text()) 
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading header:', error));
-        </script>
-    </body>
+<div class="content-wrapper">
+  <h1>Calories Calculator</h1>
+  <main class="main-content">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="calorie-box">
+      <div class="calorie-row">
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender">
+            <option value="" disabled selected hidden></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calorie-row">
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" />
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" />
+        </div>
+      </div>
+
+      <div class="calorie-row">
+        <div class="form-group">
+          <label for="activity">Activity Level</label>
+          <select id="activity">
+            <option value="" disabled selected hidden></option>
+            <option value="sedentary">Sedentary (little or no exercise)</option>
+            <option value="light">Light exercise (1-3 days/week)</option>
+            <option value="moderate">Moderate exercise (3-5 days/week)</option>
+            <option value="active">Active (6-7 days/week)</option>
+            <option value="very-active">Very Active (intense daily exercise)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="goal">Goal</label>
+          <select id="goal">
+            <option value="" disabled selected hidden></option>
+            <option value="lose">Lose Weight</option>
+            <option value="maintain">Maintain Weight</option>
+            <option value="gain">Gain Weight</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button id="calculate">Calculate</button>
+      </div>
+
+      <div class="calorie-divider"></div>
+
+      <div class="result-text">
+        You would have to consume<br />
+        <span id="calorie-result">2117</span><br />Calories
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+    </footer>
+  </main>
+</div>
+</body>
 </html>

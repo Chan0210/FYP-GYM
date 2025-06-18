@@ -1,48 +1,61 @@
-.content-wrapper h1{
-    color: #E1FF00;
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: left;
 }
 
-
-.main-content a{
-    text-decoration: none;
+.main-content h1 {
+  color: #E1FF00;
+  text-align: left;
+  margin-top: -10px;
 }
 
-.main-content a h3{
-    color: #fff;
-    font-size: 25px;
+.tool-card {
+  text-align: left;
 }
 
-.main-content a h3:hover{
-    color: #a5a5a5;
+.main-content a {
+  text-decoration: none;
 }
-  
-  .tools-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  
-  .tool-card img {
-    width: 800px;
-    height: 400px;
-    background-color: #0c0c0c;
-    border: 0.4px solid rgb(29, 29, 29);
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .tool-card h3 {
-    color: #FDFDFD;
-    margin-top: 10px;
-    font-size: 20px;
-  }
 
-  .tools-section {
-    margin-bottom: 100px;
-  }
+.main-content a h3 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
 
-  p{
-    color: #D2D2D2;
-  }
+.main-content a h3:hover {
+  color: #a5a5a5;
+}
+
+.tools-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.tool-card img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  background-color: #0c0c0c;
+  border: 0.4px solid rgb(29, 29, 29);
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.tool-card h3 {
+  color: #FDFDFD;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+p {
+  color: #D2D2D2;
+}

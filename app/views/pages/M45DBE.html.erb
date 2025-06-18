@@ -1,146 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Machine 45 Degree Back Extension</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="actiondetailpage.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Machine 45 Degree Back Extension</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "actiondetailpage", media: "all" %>
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <header>
-            <div class="wrapper">
-              <nav>
-                <div class="logo">
-                  <a href="mainpage.html"><img src="img/logo.png" alt="GYMWIKI Logo" /></a>
-                </div>
+<body>
 
-                <div class="nav-main">
-                    <ul class="nav-links">
-                        <li><a href="action.html">Action</a></li>
-                        <li class="has-megamenu">
-                            <a href="#">Tools</a>
-                            <div class="megamenu">
-                              <div class="menu-column">
-                                <a href="BMI.html">
-                                    <i class="fa-solid fa-weight-scale"></i>
-                                    <strong>BMI Calculator</strong><br>
-                                </a>
-                              </div>
-                              <div class="menu-column">
-                                <a href="Calories.html">
-                                    <i class="fa-solid fa-scale-balanced"></i>
-                                  <strong>Calories Calculator</strong><br>
-                                </a>
-                              </div>
-                            </div>
-                          </li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="Directory.html">Directory</a></li>
-                        <li><a href="#">Routines</a></li>
-                        <li><a href="#">Workout History</a></li>
-                      </ul>
-        
-                  <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Log In</a>
-                    <a href="SignUp" class="signup-btn">Sign Up</a>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </header>
-          
-          <div class="content-wrapper">
-            <h1>Machine 45 Degree Back Extension</h1>
-            <div class="video-section">
-                <div class="video-box">
-                  <div class="video-row">
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-machine-back-extension-front.mp4" type="video/mp4" />
-                    </video>
-              
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-machine-back-extensions-side.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-              
-                  <div class="instruction-list">
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">1</span></span>
-                      <p>Position your thighs on the padding and hook your feet on the platform supports.</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">2</span></span>
-                      <p>Keeping your back straight, slowly bend at your waist until your legs and back are at a 45° angle.</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">3</span></span>
-                      <p>Slowly raise your body to the starting position.</p>
-                    </div>
-                  </div>
-              
-                  <button class="add-button">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
+<div class="content-wrapper">
+  <h1>Machine 45 Degree Back Extension</h1>
+  <div class="video-section">
+    <div class="video-box">
+      <div class="video-row">
+        <video class="video-player" autoplay muted loop>
+          <source src="/vid/male-machine-back-extension-front.mp4" type="video/mp4" />
+        </video>
 
-              <div class="youtube-section">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/sRP1Q1L8pj4"
-                    title="Barbell Bench Press"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                </div>
-              </div>
+        <video class="video-player" autoplay muted loop>
+          <source src="/vid/male-machine-back-extensions-side.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-              <div class="description-box">
-                <h2>Back Extension: Basics and alternatives</h2>
-                <p>
-                  Back extensions, also known as hyperextensions or sometimes “Superman,” are bodyweight exercises that target the lower back muscles. Performed on a hyperextension bench, you hook your legs into the bench, bend your upper body forward over a hip-height cushion, and then straighten up again. This primarily works the erector spinae muscles.
-                </p>
-                <p>
-                  You can also do this exercise in other variations with a flat bench, using a gym ball, or lying on the floor. These alternatives make the exercise suitable for a home gym or general home use. For more resistance, there’s a machine version available in most fitness studios, where added weight increases muscle strain.
-                </p>
+      <div class="instruction-list">
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">1</span></span>
+          <p>Position your thighs on the padding and hook your feet on the platform supports.</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">2</span></span>
+          <p>Keeping your back straight, slowly bend at your waist until your legs and back are at a 45° angle.</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">3</span></span>
+          <p>Slowly raise your body to the starting position.</p>
+        </div>
+      </div>
 
-                <p>
-                  As an alternative with free weights or fitness bands, you can also try different versions of the deadlift or Good Mornings.
-                </p>
+      <button class="add-button">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  </div>
 
-                <h2>Correct Execution</h2>
-                <p>
-                  The main advantage of back extensions over deadlifts is the lower risk of injury and reduced chance of errors. However, maintaining proper body tension is crucial, so pay attention to precise execution.
-                </p>
-                <p>
-                  Generally, it’s important to keep your back straight in the starting and ending positions. The position of your arms is often debated. Crossing your hands behind your head or neck can make the exercise more difficult and increase the risk of injury. Instead, it’s recommended to cross your arms in front of your chest.
-                </p>
+  <div class="youtube-section">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/sRP1Q1L8pj4"
+        title="Barbell Bench Press"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
-                <h2>Step-by-Step Instructions</h2>
-                <p>
-                  1.Stand on the bench’s footrest and hook your legs below. Use your hands to support yourself on the thigh cushion.<br>
-                  2.Adjust the height of the upper cushion so your hips are just above it. This allows you to efficiently bend your upper body forward over the cushion.<br>
-                  3.Lean your thighs against the upper cushion. They should be firmly on it.<br>
-                  4.Straighten your upper body in line with your legs. Don’t overstretch your back.<br>
-                  5.Cross your arms in front of your chest. You’re now in the starting position.<br>
-                  6.Bend your upper body forward over your hip, keeping your back straight. The movement comes from the hip.<br>
-                  7.Hold the position briefly and then straighten up again.<br>
-                </p>
-                <h2>Common Mistakes</h2>
-                <p>
-                  A frequent mistake is overstretching the back when lifting the upper body. Ensure your back forms a straight line with your legs in the starting position and doesn’t stretch too far backward.
-                </p>
-                <p>
-                  It’s also essential to maintain controlled movements without rocking. Lower and lift your body slowly and with control.
-                </p>
-              </div>
-          
-              <footer>
-                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-              </footer>
-            </main>
-          </div>
-    </body>
+  <div class="description-box">
+    <h2>Back Extension: Basics and alternatives</h2>
+    <p>
+      Back extensions, also known as hyperextensions or sometimes “Superman,” are bodyweight exercises that target the lower back muscles. Performed on a hyperextension bench, you hook your legs into the bench, bend your upper body forward over a hip-height cushion, and then straighten up again. This primarily works the erector spinae muscles.
+    </p>
+    <p>
+      You can also do this exercise in other variations with a flat bench, using a gym ball, or lying on the floor. These alternatives make the exercise suitable for a home gym or general home use. For more resistance, there’s a machine version available in most fitness studios, where added weight increases muscle strain.
+    </p>
+
+    <p>
+      As an alternative with free weights or fitness bands, you can also try different versions of the deadlift or Good Mornings.
+    </p>
+
+    <h2>Correct Execution</h2>
+    <p>
+      The main advantage of back extensions over deadlifts is the lower risk of injury and reduced chance of errors. However, maintaining proper body tension is crucial, so pay attention to precise execution.
+    </p>
+    <p>
+      Generally, it’s important to keep your back straight in the starting and ending positions. The position of your arms is often debated. Crossing your hands behind your head or neck can make the exercise more difficult and increase the risk of injury. Instead, it’s recommended to cross your arms in front of your chest.
+    </p>
+
+    <h2>Step-by-Step Instructions</h2>
+    <p>
+      1.Stand on the bench’s footrest and hook your legs below. Use your hands to support yourself on the thigh cushion.<br>
+      2.Adjust the height of the upper cushion so your hips are just above it. This allows you to efficiently bend your upper body forward over the cushion.<br>
+      3.Lean your thighs against the upper cushion. They should be firmly on it.<br>
+      4.Straighten your upper body in line with your legs. Don’t overstretch your back.<br>
+      5.Cross your arms in front of your chest. You’re now in the starting position.<br>
+      6.Bend your upper body forward over your hip, keeping your back straight. The movement comes from the hip.<br>
+      7.Hold the position briefly and then straighten up again.<br>
+    </p>
+    <h2>Common Mistakes</h2>
+    <p>
+      A frequent mistake is overstretching the back when lifting the upper body. Ensure your back forms a straight line with your legs in the starting position and doesn’t stretch too far backward.
+    </p>
+    <p>
+      It’s also essential to maintain controlled movements without rocking. Lower and lift your body slowly and with control.
+    </p>
+  </div>
+
+</div>
+</body>
 </html>

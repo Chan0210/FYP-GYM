@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Workout History Details</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="routine_detail.css">
-    <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <title>Workout History Details Page</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="routine_detail.css">
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <div id="header-placeholder"></div>
+<body>
 
-    <div class="content-wrapper">
-      <main class="main-content">
-        <h1 class="routine-title">Workout History Details</h1>
+<div class="content-wrapper">
+  <main class="main-content">
+    <h1 class="routine-title">Workout History Details</h1>
 
-        <div class="routine-box">
-          <div class="routine-header">
-            <h2>Name of Routine</h2>
-            <p class="routine-time">Time used: 2h 45min</p>
-          </div>
-          <p class="routine-date">Date: 21/4/2025</p>
+    <div class="routine-box">
+      <div class="routine-header">
+        <h2>Name of Routine</h2>
+        <p class="routine-time">Time used: 2h 45min</p>
+      </div>
+      <p class="routine-date">Date: 21/4/2025</p>
 
-          <div class="action-card">
-            <div class="action-left">Action 1</div>
-            <div class="action-right">
-              <span>Times of Set：4</span>
-              <span>Calories Used: 356 kcal</span>
-            </div>
-          </div>
-
-          <div class="action-card">
-            <div class="action-left">Action 1</div>
-            <div class="action-right">
-              <span>Times of Set：6</span>
-              <span>Calories Used: 356 kcal</span>
-            </div>
-          </div>
-
-          <div class="action-card">
-            <div class="action-left">Action 1</div>
-            <div class="action-right">
-              <span>Times of Set：8</span>
-              <span>Calories Used: 356 kcal</span>
-            </div>
-          </div>
-
-          <p class="total-calories">Total Calories Used: 1068 kcal</p>
-
-          <div class="routine-buttons">
-
-            <a href="work _out_history.html"><button class="done-btn">Back</button></a>
-          </div>
+      <div class="action-card">
+        <div class="action-left">Action 1</div>
+        <div class="action-right">
+          <span>Number of Set：4</span>
+          <span>Number of Reps：10</span>
+          <span>Calories Used: 356 kcal</span>
         </div>
+      </div>
 
-        <footer>
-          <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-        </footer>
-      </main>
+      <div class="action-card">
+        <div class="action-left">Action 1</div>
+        <div class="action-right">
+          <span>Number of Set：6</span>
+          <span>Number of Reps：10</span>
+          <span>Calories Used: 356 kcal</span>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-left">Action 1</div>
+        <div class="action-right">
+          <span>Number Set：8</span>
+          <span>Number of Reps：10</span>
+          <span>Calories Used: 356 kcal</span>
+        </div>
+      </div>
+
+      <p class="total-calories">Total Calories Used: 1068 kcal</p>
+
+      <div class="routine-buttons">
+
+        <a href="workout_history.html"><button class="done-btn">Back</button></a>
+      </div>
     </div>
 
-        <script> 
-            fetch('header.html')
-                .then(response => response.text()) 
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading header:', error));
-        </script>
-  </body>
+    <footer>
+      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+    </footer>
+  </main>
+</div>
+
+</body>
 </html>

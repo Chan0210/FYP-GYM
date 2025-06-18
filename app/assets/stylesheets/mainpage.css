@@ -1,13 +1,10 @@
 .main-content {
-    color: #fff;
-  }
-  
-
-
-.main-content {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 40px;
+    background-color: #000;
+    color: #fff;
+  margin-top: -30px;
   }
 
 .main-content a{
@@ -16,11 +13,22 @@
 
 .main-content a h3{
     color: #fff;
-
 }
 
 .main-content a h3:hover{
     color: #a5a5a5;
+}
+
+.menu-title {
+  color: #D2D2D2;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.menu-title:hover {
+  color: white;
 }
   
   .tools-section {
@@ -51,23 +59,28 @@
     font-size: 20px;
   }
 
-  .muscle-section .hr hr {
-    border: 0;
-    border-top: 0.3px solid #5D5D5D; /* 设置水平线的颜色和宽度 */
-    margin-bottom: 30px; /* 调整上下边距 */
-  }
+.muscle-line {
+  border: 0;
+  border-top: 0.3px solid #5D5D5D;
+  margin: 0 0 20px 0;
+}
   
   .muscle-section h2 {
     color: #fff;
     font-size: 25px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   
   .muscle-grid {
     display: flex;
-    gap: 43px;
+    justify-content: center;
+    gap: 50px;
     flex-wrap: wrap;
   }
+
+.muscle-box{
+  margin-top: 10px;
+}
   
   .muscle-box img{
     width: 120px;
@@ -78,9 +91,9 @@
 
 
   .image-caption {
-    margin-top: 8px; /* 为文字和图片之间添加一些间距 */
-    color: #D2D2D2; /* 设置文字颜色 */
-    font-size: 20px; /* 设置字体大小 */
+    margin-top: 8px;
+    color: #D2D2D2;
+    font-size: 20px;
     font-weight: bold;
   }
   

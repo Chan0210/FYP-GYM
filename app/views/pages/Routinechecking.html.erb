@@ -8,16 +8,30 @@
 </head>
 
 <body>
-  <div id="header-placeholder"></div>
-  <div class="content-wrapper">
-    <main class="main-content">
-      <h1 class="page-title">Routine list</h1>
+<div class="content-wrapper">
+  <main class="main-content">
+    <h1 class="page-title">Routine list</h1>
 
-      <div class="filter-buttons">
-        <button>Week</button>
-        <button>Month</button>
-        <button>Year</button>
-        <button>All</button>
+    <div class="filter-buttons">
+      <button>Week</button>
+      <button>Month</button>
+      <button>Year</button>
+      <button>All</button>
+    </div>
+
+    <div class="history-section">
+      <div class="history-date">21/4/2025</div>
+      <div class="history-card">
+        <a href="routine_detail.html">
+          <div class="routine-info">
+            <strong>Routine 1</strong>
+            <div class="routine-details">
+              <span>1341 kcal</span>
+              <span>2h 35min</span>
+            </div>
+          </div>
+        </a>
+        <div class="arrow">&gt;</div>
       </div>
 
       <div class="history-section">
@@ -25,46 +39,21 @@
         <div class="history-card">
           <a href="routine_detail.html">
             <div class="routine-info">
-            <strong>Routine 1</strong>
-            <div class="routine-details">
-              <span>1341 kcal</span>
-              <span>2h 35min</span>
+              <strong>Routine 1</strong>
+              <div class="routine-details">
+                <span>1341 kcal</span>
+                <span>2h 35min</span>
+              </div>
             </div>
-          </div>
           </a>
           <div class="arrow">&gt;</div>
         </div>
 
-      <div class="history-section">
-        <div class="history-date">21/4/2025</div>
-        <div class="history-card">
-          <a href="routine_detail.html">
-            <div class="routine-info">
-            <strong>Routine 1</strong>
-            <div class="routine-details">
-              <span>1341 kcal</span>
-              <span>2h 35min</span>
-            </div>
-          </div>
-          </a>
-          <div class="arrow">&gt;</div>
-        </div>
-
-      <footer>
-        <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-      </footer>
-    </main>
-  </div>
+        <footer>
+          <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+        </footer>
+  </main>
+</div>
 </body>
 
-<script>
-            
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                
-                    document.getElementById('header-placeholder').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading header:', error));
-        </script>
 </html>

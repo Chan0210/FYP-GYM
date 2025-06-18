@@ -1,149 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Push Up</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="actiondetailpage.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Push Up</title>
+  <%= stylesheet_link_tag 'header', media: 'all' %>
+  <%= stylesheet_link_tag 'actiondetailpage', media: 'all' %>
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <header>
-            <div class="wrapper">
-              <nav>
-                <div class="logo">
-                  <a href="mainpage.html"><img src="img/logo.png" alt="GYMWIKI Logo" /></a>
-                </div>
+<body>
+<div class="content-wrapper">
+  <h1>Push Up</h1>
+  <div class="video-section">
+    <div class="video-box">
+      <div class="video-row">
+        <video class="video-player" autoplay muted loop>
+          <source src="vid/male-Bodyweight-push-up-front.mp4" type="video/mp4" />
+        </video>
 
-                <div class="nav-main">
-                    <ul class="nav-links">
-                        <li><a href="action.html">Action</a></li>
-                        <li class="has-megamenu">
-                            <a href="#">Tools</a>
-                            <div class="megamenu">
-                              <div class="menu-column">
-                                <a href="BMI.html">
-                                    <i class="fa-solid fa-weight-scale"></i>
-                                    <strong>BMI Calculator</strong><br>
-                                </a>
-                              </div>
-                              <div class="menu-column">
-                                <a href="Calories.html">
-                                    <i class="fa-solid fa-scale-balanced"></i>
-                                  <strong>Calories Calculator</strong><br>
-                                </a>
-                              </div>
-                            </div>
-                          </li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="Directory.html">Directory</a></li>
-                        <li><a href="#">Routines</a></li>
-                        <li><a href="#">Workout History</a></li>
-                      </ul>
-        
-                  <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Log In</a>
-                    <a href="SignUp" class="signup-btn">Sign Up</a>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </header>
-          
-          <div class="content-wrapper">
-            <h1>Push Up</h1>
-            <div class="video-section">
-                <div class="video-box">
-                  <div class="video-row">
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-Bodyweight-push-up-front.mp4" type="video/mp4" />
-                    </video>
-              
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-Bodyweight-push-up-side.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-              
-                  <div class="instruction-list">
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">1</span></span>
-                      <p>Place your hands firmly on the ground, directly under shoulders.</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">2</span></span>
-                      <p>Flatten your back so your entire body is straight and slowly lower your body</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">3</span></span>
-                      <p>Draw shoulder blades back and down, keeping elbows tucked close to your body</p>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="step-number"><span class="num">4</span></span>
-                        <p>Exhale as you push back to the starting position.</p>
-                      </div>
-                  </div>
-              
-                  <button class="add-button">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-          
-              <div class="youtube-section">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/lxufUii4fd4"
-                    title="Barbell Bench Press"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                </div>
-              </div>
+        <video class="video-player" autoplay muted loop>
+          <source src="vid/male-Bodyweight-push-up-side.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-              <div class="description-box">
-                <h2>Push-Ups: Basics and alternatives</h2>
-                <p>
-                  Push-ups are one of the most well-known fitness exercises ever. Everyone knows them, and almost everyone has done them at least once in gym class. The basic movement goes like this: With your arms extended and your body straight, you support yourself on your hands and toes. By bending and extending your arms, you primarily move your upper body.
-                </p>
-                <p>
-                  Push-ups aim to train the chest muscles and triceps with this movement sequence. Since several muscle groups are trained, push-ups are considered a compound exercise.
-                </p>
-                <p>
-                  As an alternative with free weights or fitness bands, you can also try different versions of the deadlift or Good Mornings.
-                </p>
-                <p>Since you can perform the exercise anywhere without any equipment, it’s also perfect for training at home. Push-ups are an excellent alternative to barbell bench presses.</p>
-                <p>Other variations of push-ups include decline push-ups or push-ups with a gymnastics ball.</p>
-                
-                <h2>Correct Execution</h2>
-                <p>
-                  Even though everyone knows push-ups, the correct execution isn’t as trivial as you might think. There are several ways to perform the exercise with different muscle or training focuses. The muscle focus is varied by the width of the support, and there are also different placement options for the arms and legs in terms of height.
-                </p>
+      <div class="instruction-list">
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">1</span></span>
+          <p>Place your hands firmly on the ground, directly under shoulders.</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">2</span></span>
+          <p>Flatten your back so your entire body is straight and slowly lower your body</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">3</span></span>
+          <p>Draw shoulder blades back and down, keeping elbows tucked close to your body</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">4</span></span>
+          <p>Exhale as you push back to the starting position.</p>
+        </div>
+      </div>
 
-                <h2>Step-by-Step Instructions</h2>
-                <p>
-                  1.Kneel on the floor and lean your upper body forward far enough, so you can support yourself with your hands (shoulder width).<br>
-                  2.Extend both legs and balance on your toes.<br>
-                  3.Extend both arms and move your hands so they’re roughly below your shoulders. If you like, you can vary the width of your support in this step (see above).<br>
-                  4.Tense your core so that your head, upper body, and legs form a nearly straight line. Don’t stick your butt out too far and don’t let your pelvis sag. You’re now in the starting position.<br>
-                  5.Slowly and controlled, lower your upper body down by bending your arms. End the movement when your chest is just above the floor. If you’re using a higher support position for your arms or legs, end the movement when your elbows are fully bent.<br>
-                  6.Hold the position for a brief moment and then straighten your arms (almost) all the way. Keep your body tensed throughout the entire movement in the manner described earlier.<br>
-                </p>
-                <h2>Common Mistakes</h2>
-                <p>
-                  The body posture during push-ups is crucial for good muscle stimulation. Often, you see people either sticking their butt out too far or letting their hips sag. Both are negative for the effectiveness of the exercise. To perform push-ups correctly, make sure your body is straight, and your core stays tense. Your head, upper body, and legs should form a line.
-                </p>
-                <p>
-                  Incomplete execution is also often unconsciously done. If the arms are not fully bent and the upper body is not fully lowered, it naturally reduces the training effect. Therefore, pay attention to a complete exercise execution as much as possible.
-                </p>
-                <p>Both can be best controlled by performing the exercise in front of a mirror at first or simply filming your training and analyzing it afterward.</p>
-                <p>Another important point is the training speed. To do a lot of push-ups, you often see the movement executed quickly. This usually results in an incomplete execution, with either the arms not fully extended or the upper body not fully lowered. Therefore, pay attention to a clean, controlled execution. What’s important is a good muscle feeling, not just the number of repetitions.</p>
-              </div>
+      <button class="add-button">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  </div>
 
-              <footer>
-                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-              </footer>
-            </main>
-          </div>
-    </body>
+  <div class="youtube-section">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/lxufUii4fd4"
+        title="Barbell Bench Press"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="description-box">
+    <h2>Push-Ups: Basics and alternatives</h2>
+    <p>
+      Push-ups are one of the most well-known fitness exercises ever. Everyone knows them, and almost everyone has done them at least once in gym class. The basic movement goes like this: With your arms extended and your body straight, you support yourself on your hands and toes. By bending and extending your arms, you primarily move your upper body.
+    </p>
+    <p>
+      Push-ups aim to train the chest muscles and triceps with this movement sequence. Since several muscle groups are trained, push-ups are considered a compound exercise.
+    </p>
+    <p>
+      As an alternative with free weights or fitness bands, you can also try different versions of the deadlift or Good Mornings.
+    </p>
+    <p>Since you can perform the exercise anywhere without any equipment, it’s also perfect for training at home. Push-ups are an excellent alternative to barbell bench presses.</p>
+    <p>Other variations of push-ups include decline push-ups or push-ups with a gymnastics ball.</p>
+
+    <h2>Correct Execution</h2>
+    <p>
+      Even though everyone knows push-ups, the correct execution isn’t as trivial as you might think. There are several ways to perform the exercise with different muscle or training focuses. The muscle focus is varied by the width of the support, and there are also different placement options for the arms and legs in terms of height.
+    </p>
+
+    <h2>Step-by-Step Instructions</h2>
+    <p>
+      1.Kneel on the floor and lean your upper body forward far enough, so you can support yourself with your hands (shoulder width).<br>
+      2.Extend both legs and balance on your toes.<br>
+      3.Extend both arms and move your hands so they’re roughly below your shoulders. If you like, you can vary the width of your support in this step (see above).<br>
+      4.Tense your core so that your head, upper body, and legs form a nearly straight line. Don’t stick your butt out too far and don’t let your pelvis sag. You’re now in the starting position.<br>
+      5.Slowly and controlled, lower your upper body down by bending your arms. End the movement when your chest is just above the floor. If you’re using a higher support position for your arms or legs, end the movement when your elbows are fully bent.<br>
+      6.Hold the position for a brief moment and then straighten your arms (almost) all the way. Keep your body tensed throughout the entire movement in the manner described earlier.<br>
+    </p>
+    <h2>Common Mistakes</h2>
+    <p>
+      The body posture during push-ups is crucial for good muscle stimulation. Often, you see people either sticking their butt out too far or letting their hips sag. Both are negative for the effectiveness of the exercise. To perform push-ups correctly, make sure your body is straight, and your core stays tense. Your head, upper body, and legs should form a line.
+    </p>
+    <p>
+      Incomplete execution is also often unconsciously done. If the arms are not fully bent and the upper body is not fully lowered, it naturally reduces the training effect. Therefore, pay attention to a complete exercise execution as much as possible.
+    </p>
+    <p>Both can be best controlled by performing the exercise in front of a mirror at first or simply filming your training and analyzing it afterward.</p>
+    <p>Another important point is the training speed. To do a lot of push-ups, you often see the movement executed quickly. This usually results in an incomplete execution, with either the arms not fully extended or the upper body not fully lowered. Therefore, pay attention to a clean, controlled execution. What’s important is a good muscle feeling, not just the number of repetitions.</p>
+  </div>
+</body>
 </html>

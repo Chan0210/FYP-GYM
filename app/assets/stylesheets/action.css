@@ -1,88 +1,122 @@
-.content-wrapper h1{
-    color: #E1FF00;
+/* 整体页面内容容器 */
+.content-wrapper {
+  position: relative;
 }
 
-/* Layout for filter and search */
+/* 页面标题样式 */
+.content-wrapper h1 {
+  color: #E1FF00;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/* 顶部控制区：Filter + Search */
 .action-controls {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  gap: 10px; /* 可选：添加间距 */
+  gap: 20px;
+  width: 100%;   /* ✅ 让它填满 content-wrapper */
+  padding: 0;                /* ✅ 不要左右 40px padding，会导致错位 */
+  box-sizing: border-box;   /* ✅ 防止内容超出边界 */
+  margin-top: 60px;
 }
-
-.search-bar {
-  flex: 1; /* 让它自动占满剩余空间 */
-  padding: 10px;
-  background-color: #282828;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.search-bar::placeholder {
-    color: #aaa;
-}
-
-.filter-btn {
-  padding: 10px 15px;
-  background-color: #282828;
-  color: #aaa;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 
 .filter-dropdown {
-  position: relative;
-  flex-shrink: 0; /* 不被压缩 */
+  position: relative; /* ✅ 关键：作为定位参考点 */
 }
 
+/* 滑到 filter-label 或整块时下拉出现 */
+.filter-dropdown:hover .filter-options {
+  display: block;
+}
+
+/* 默认隐藏菜单 */
 .filter-options {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  display: none;
   background-color: #282828;
   list-style: none;
   padding: 10px;
   margin-top: 1px;
   z-index: 100;
-  width: 100%;
+  width: 160px;
   border-radius: 5px;
 }
 
+/* filter-label 样式（像按钮但不是按钮） */
+.filter-label {
+  padding: 10px 16px;
+  background-color: #282828;
+  color: #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-label:hover {
+  background-color: #333;
+}
+
+/* 下拉菜单内链接 */
 .filter-options li a {
   color: #aaa;
   text-decoration: none;
   display: block;
   padding: 8px 15px;
 }
-.filter-options li a:hover{
+.filter-options li a:hover {
   text-decoration: underline;
 }
 
-.filter-dropdown:hover .filter-options {
-  display: block;
+/* 搜索栏 */
+.search-bar {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #282828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
 }
 
-/* Action cards */
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+/* 动作卡片网格布局 */
 .actions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  margin-top: 30px;
+
+  /* 关键两行 ↓↓↓ */
+  width: 100%;          /* 跟随 .content-wrapper 宽度缩放 */
+  max-width: 1200px;    /* 保留桌面上限 */
+
+  margin: 40px auto;
+  box-sizing: border-box; /* 让 padding/gap 计入宽度 */
 }
 
+/* 单个卡片 */
 .action-card {
   background-color: #1a1a1a;
   border-radius: 8px;
   padding: 15px;
   color: #fff;
+  width: 100%;
 }
 
+/* 卡片头部：标题+按钮 */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -91,28 +125,30 @@
   margin-bottom: 10px;
 }
 
-.card-header span{
+.card-header span {
   font-size: 20px;
 }
-  .add-button {
-    background-color: #d2f800;
-    color: #000;
-    border: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;  
-    transition: background-color 0.3s ease;
-  }
 
-  .add-button:hover {
-    background-color: #c4e100;
-  }
+.add-button {
+  background-color: #d2f800;
+  color: #000;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
+.add-button:hover {
+  background-color: #c4e100;
+}
+
+/* 卡片内图片区域 */
 .card-body {
   background-color: #ccc;
   height: auto;
@@ -120,7 +156,8 @@
   text-align: center;
 }
 
-.card-body img{
-  width: 220px;
-  height: auto; 
+.card-body img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
 }

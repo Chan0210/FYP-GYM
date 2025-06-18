@@ -1,0 +1,19 @@
+<header>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">
+        <%= link_to adminadd_path do %>
+          <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), "mainpage_path" %>
+        <% end %>
+      </div>
+
+      <div class="nav-main">
+        <ul class="nav-links">
+          <li><%= link_to 'Add Action', adminadd_path %></li>
+          <li><%= link_to 'Edit Action', adminedit_path %></li>
+          <li><%= link_to 'Check User Data', admin_user_data_path %></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

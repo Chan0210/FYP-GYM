@@ -1,44 +1,40 @@
-
-
-
 <header>
-    <div class="wrapper">
-      <nav>
-        <div class="logo">
-          <a href="mainpage.html.erb"><img src="img/logo.png" alt="GYMWIKI Logo" /></a>
-        </div>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">
+        <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), root_path %>
+      </div>
 
-        <div class="nav-main">
-            <ul class="nav-links">
-                <li><a href="action.html.erb">Action</a></li>
-                <li class="has-megamenu">
-                    <a href="#">Tools</a>
-                    <div class="megamenu">
-                      <div class="menu-column">
-                        <a href="bmi.html.erb">
-                            <i class="fa-solid fa-weight-scale"></i>
-                            <strong>BMI Calculator</strong><br>
-                        </a>
-                      </div>
-                      <div class="menu-column">
-                        <a href="calorie.html.erb">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                          <strong>Calories Calculator</strong><br>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                <li><a href="cart.html.erb">Cart</a></li>
-                
-                <li><a href="routine.html.erb">Routines</a></li>
-                <li><a href="work _out_history.html.erb">Workout History</a></li>
-              </ul>
+      <div class="nav-main">
+        <ul class="nav-links">
+          <li><%= link_to "Action", action_path %></li>
+          <li class="has-megamenu">
+            <span class="menu-title">Tools</span>
+            <div class="megamenu">
+              <div class="menu-column">
+                <%= link_to bmi_path do %>
+                  <i class="fa-solid fa-weight-scale"></i>
+                  <strong>BMI Calculator</strong><br>
+                <% end %>
+              </div>
+              <div class="menu-column">
+                <%= link_to calorie_path do %>
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <strong>Calories Calculator</strong><br>
+                <% end %>
+              </div>
+            </div>
+          </li>
+          <li><%= link_to "Cart", cart_path %></li>
+          <li><%= link_to "Routines", routine_path %></li>
+          <li><%= link_to "Workout History", workout_history_path %></li>
+        </ul>
 
-          <div class="auth-buttons">
-            <a href="login.html.erb" class="login-btn">Log In</a>
-            <a href="signup.html.erb" class="signup-btn">Sign Up</a>
-          </div>
+        <div class="auth-buttons">
+          <%= link_to "Log In", pages_login_path, class: "login-btn" %>
+          <%= link_to "Sign Up", signup_path, class: "signup-btn" %>
         </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,39 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Routine Page</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="routine.css">
-        <link rel="stylesheet" href="routinereview.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Routine Page</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="routine.css">
+  <link rel="stylesheet" href="routinereview.css">
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-      <div id="header-placeholder"></div>
+<body>
 
-          <div class="content-wrapper">
-            <h1>Routine</h1>
-            <div id="routine-placeholder"></div>
-            
-            <footer>
-                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-            </footer>
-          </div>
-          <script>
-            
-            fetch('header.html')
-                .then(response => response.text()) 
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading header:', error));
+<div class="content-wrapper">
+  <h1>Routine</h1>
+  <div id="routine-placeholder"></div>
 
-                fetch('routinereview.html')
-                .then(response => response.text()) 
-                .then(data => {
-                    document.getElementById('routine-placeholder').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading header:', error));
-        </script>
-    </body>
+  <footer>
+    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+  </footer>
+</div>
+
+</body>
 </html>

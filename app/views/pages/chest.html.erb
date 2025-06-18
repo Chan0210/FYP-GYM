@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chest Page</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "muscle", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
+</head>
+
+<body>
+<div class="content-wrapper">
+  <main class="main-content">
+    <h1>Chest</h1>
+    <section class="tools-section">
+      <div class="tool-card">
+        <%= link_to bbp_path do %>
+          <h3>Barbell Bench Press</h3>
+        <% end %>
+        <%= link_to bbp_path do %>
+          <%= image_tag "barbell_bench_press.webp", alt: "Barbell Bench Press" %>
+        <% end %>
+        <p>…There are several variations of the bench press, such as: Dumbbell Bench Press, Incline Bench Press, and Negative Bench Press. Correct execution Although the bench press is a common exercise,…</p>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="tool-card">
+        <%= link_to ccp_path do %>
+          <h3>Cable Chest Press</h3>
+        <% end %>
+        <%= link_to ccp_path do %>
+          <%= image_tag "Cable Chest Press.webp", alt: "Cable Chest Press" %>
+        <% end %>
+        <p>…weight in front of your chest with extended arms to activate your chest muscles – you might not see this exercise as often in the gym. To perform cable chest…</p>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="tool-card">
+        <%= link_to pu_path do %>
+          <h3>Push Up</h3>
+        <% end %>
+        <%= link_to pu_path do %>
+          <%= image_tag "push up.webp", alt: "Push Up" %>
+        <% end %>
+        <p>…anywhere without any equipment, it’s also perfect for training at home. Push-ups are an excellent alternative to barbell bench presses. Other variations of push-ups include decline push-ups or push-ups with…</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

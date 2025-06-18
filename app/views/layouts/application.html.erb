@@ -23,7 +23,11 @@
   </head>
 
   <body>
-  <%= render "layouts/header" %>
+  <% if controller_name == 'admin' %>
+    <%= render 'layouts/admin_header' %>
+  <% else %>
+    <%= render 'layouts/header' %>
+  <% end %>
     <%= yield %>
   </body>
 </html>

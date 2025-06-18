@@ -1,136 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dumbbell Superman</title>
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="actiondetailpage.css">
-        <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <title>Dumbbell Superman</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <body>
-        <header>
-            <div class="wrapper">
-              <nav>
-                <div class="logo">
-                  <a href="mainpage.html"><img src="img/logo.png" alt="GYMWIKI Logo" /></a>
-                </div>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "actiondetailpage", media: "all" %>
 
-                <div class="nav-main">
-                    <ul class="nav-links">
-                        <li><a href="action.html">Action</a></li>
-                        <li class="has-megamenu">
-                            <a href="#">Tools</a>
-                            <div class="megamenu">
-                              <div class="menu-column">
-                                <a href="BMI.html">
-                                    <i class="fa-solid fa-weight-scale"></i>
-                                    <strong>BMI Calculator</strong><br>
-                                </a>
-                              </div>
-                              <div class="menu-column">
-                                <a href="Calories.html">
-                                    <i class="fa-solid fa-scale-balanced"></i>
-                                  <strong>Calories Calculator</strong><br>
-                                </a>
-                              </div>
-                            </div>
-                          </li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="Directory.html">Directory</a></li>
-                        <li><a href="#">Routines</a></li>
-                        <li><a href="#">Workout History</a></li>
-                      </ul>
-        
-                  <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Log In</a>
-                    <a href="SignUp" class="signup-btn">Sign Up</a>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </header>
-          
-          <div class="content-wrapper">
-            <h1>Dumbbell Superman</h1>
-            <div class="video-section">
-                <div class="video-box">
-                  <div class="video-row">
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-dumbbell-superman-front.mp4" type="video/mp4" />
-                    </video>
-              
-                    <video class="video-player" autoplay muted loop>
-                      <source src="vid/male-dumbbell-superman-side.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-              
-                  <div class="instruction-list">
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">1</span></span>
-                      <p>Lay flat on the ground on your stomach with your arms extended overhead. Hold a dumbbell with a neutral grip.</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">2</span></span>
-                      <p>Lift your legs and chest off the ground simultaneously and hold for a 1 count at the top.</p>
-                    </div>
-                    <div class="instruction-item">
-                      <span class="step-number"><span class="num">3</span></span>
-                      <p>Relax your lower back and lower your legs and chest back to the floor.</p>
-                    </div>
-                  </div>
-              
-                  <button class="add-button">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="youtube-section">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/Ikq3OCFoP7c"
-                    title="Barbell Bench Press"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                </div>
-              </div>
+  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+</head>
 
-              <div class="description-box">
-                <h2>Lying Back Extension: Basics and alternatives</h2>
-                <p>
-                  The Lying Back Extension is a great way to work your lower back at home. This exercise is a slight variation of the more popular version on the hyperextension bench. You’ll lie flat on the floor, tighten your back, and focus on training your lower back muscles. The range of motion is smaller, as your upper body isn’t bent over your hips.
-                </p>
-                <p>
-                  All you need is a soft surface to do lying back extensions, making them perfect for home workouts. Alternatively, you can try Back Extensions with a Gymnastic Ball for a greater range of motion or Good Mornings with a fitness band as another compound exercise option.
-                </p>
+<body>
+<div class="content-wrapper">
+  <h1>Dumbbell Superman</h1>
 
-                <h2>Correct Execution</h2>
-                <p>
-                  Choose a surface that’s not too soft or too hard, like a gymnastics mat.
-                </p>
-                <p>
-                  The range of motion for this exercise is limited, but it will improve over time as you consistently practice and refine your form.
-                </p>
+  <div class="video-section">
+    <div class="video-box">
+      <div class="video-row">
+        <%= video_tag("male-dumbbell-superman-front.mp4", autoplay: true, muted: true, loop: true, class: "video-player") %>
+        <%= video_tag("male-dumbbell-superman-side.mp4", autoplay: true, muted: true, loop: true, class: "video-player") %>
+      </div>
 
-                <h2>Step-by-Step Instructions</h2>
-                <p>
-                  1.Lie flat on your back on the gymnastics mat.<br>
-                  2.Extend your legs and place your hands behind your head or neck.<br>
-                  3.Tighten your core without lifting your upper body yet. This is your starting position.<br>
-                  4.Raise your upper body by lifting your shoulders off the ground, and simultaneously lift your feet.<br>
-                  5.Hold this position briefly, then return to the starting position.<br>
-                </p>
-                <h2>Common Mistakes</h2>
-                <p>
-                  Avoid swinging movements during this exercise. It’s better to do fewer clean reps than to compromise your form with too many. Pay close attention to maintaining the correct body posture to prevent any strain on your back.
-                </p>
-              </div>
-              
-              <footer>
-                <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-              </footer>
-            </main>
-          </div>
-    </body>
+      <div class="instruction-list">
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">1</span></span>
+          <p>Lay flat on the ground on your stomach with your arms extended overhead. Hold a dumbbell with a neutral grip.</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">2</span></span>
+          <p>Lift your legs and chest off the ground simultaneously and hold for a 1 count at the top.</p>
+        </div>
+        <div class="instruction-item">
+          <span class="step-number"><span class="num">3</span></span>
+          <p>Relax your lower back and lower your legs and chest back to the floor.</p>
+        </div>
+      </div>
+
+      <button class="add-button">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="youtube-section">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/Ikq3OCFoP7c"
+        title="Barbell Bench Press"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="description-box">
+    <h2>Lying Back Extension: Basics and alternatives</h2>
+    <p>The Lying Back Extension is a great way to work your lower back at home...</p>
+
+    <h2>Correct Execution</h2>
+    <p>Choose a surface that’s not too soft or too hard, like a gymnastics mat.</p>
+
+    <h2>Step-by-Step Instructions</h2>
+    <p>
+      1. Lie flat on your back on the gymnastics mat.<br>
+      2. Extend your legs and place your hands behind your head or neck.<br>
+      3. Tighten your core...<br>
+    </p>
+
+    <h2>Common Mistakes</h2>
+    <p>Avoid swinging movements during this exercise...</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+  </footer>
+</div>
+</body>
 </html>
