@@ -9,43 +9,37 @@
 
 <body>
 
-<div class="content-wrapper">
-  <h1>Machine 45 Degree Back Extension</h1>
-  <div class="video-section">
-    <div class="video-box">
-      <div class="video-row">
-        <video class="video-player" autoplay muted loop>
-          <source src="/vid/male-machine-back-extension-front.mp4" type="video/mp4" />
-        </video>
-
-        <video class="video-player" autoplay muted loop>
-          <source src="/vid/male-machine-back-extensions-side.mp4" type="video/mp4" />
-        </video>
+<div class="actiondetail-content-wrapper">
+  <div class="actiondetail-header-row">
+    <h1>Machine 45 Degree Back Extension</h1>
+    <button class="actiondetail-add-button"><i class="fa fa-plus"></i></button>
+  </div>
+  <div class="actiondetail-video-section">
+    <div class="actiondetail-video-box">
+      <div class="actiondetail-video-row">
+        <%= video_tag("male-dumbbell-superman-front.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
+        <%= video_tag("male-dumbbell-superman-side.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
       </div>
 
-      <div class="instruction-list">
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">1</span></span>
+      <div class="actiondetail-instruction-list">
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">1</span></span>
           <p>Position your thighs on the padding and hook your feet on the platform supports.</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">2</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">2</span></span>
           <p>Keeping your back straight, slowly bend at your waist until your legs and back are at a 45° angle.</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">3</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">3</span></span>
           <p>Slowly raise your body to the starting position.</p>
         </div>
       </div>
-
-      <button class="add-button">
-        <i class="fa fa-plus"></i>
-      </button>
     </div>
   </div>
 
-  <div class="youtube-section">
-    <div class="video-wrapper">
+  <div class="actiondetail-youtube-section">
+    <div class="actiondetail-video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/sRP1Q1L8pj4"
         title="Barbell Bench Press"
@@ -56,7 +50,7 @@
     </div>
   </div>
 
-  <div class="description-box">
+  <div class="actiondetail-description-box">
     <h2>Back Extension: Basics and alternatives</h2>
     <p>
       Back extensions, also known as hyperextensions or sometimes “Superman,” are bodyweight exercises that target the lower back muscles. Performed on a hyperextension bench, you hook your legs into the bench, bend your upper body forward over a hip-height cushion, and then straighten up again. This primarily works the erector spinae muscles.

@@ -8,5 +8,7 @@ class AdminController < ApplicationController
   end
 
   def adminedit
-  end
+  end
+  def edit_action
+  end
 end

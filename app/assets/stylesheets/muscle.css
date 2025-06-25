@@ -1,45 +1,38 @@
-.main-content {
+.muscle-content-wrapper{
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
+  margin: 40px auto;
+  border: 0.6px solid #5D5D5D;
+  padding: 40px;
   background-color: #000;
-  color: #fff;
-  text-align: left;
+  border-radius: 6px;
 }
 
-.main-content h1 {
+.muscle-content-wrapper h1{
   color: #E1FF00;
-  text-align: left;
-  margin-top: -10px;
 }
 
-.tool-card {
-  text-align: left;
-}
-
-.main-content a {
+.muscle-main-content a{
   text-decoration: none;
 }
 
-.main-content a h3 {
+.muscle-main-content a h3{
   color: #fff;
   font-size: 25px;
-  margin-bottom: 10px;
 }
 
-.main-content a h3:hover {
+.muscle-main-content a h3:hover{
   color: #a5a5a5;
 }
 
-.tools-section {
+.muscle-tools-section {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
-.tool-card img {
+
+.muscle-tool-card img {
   max-width: 800px;
   width: 100%;
   height: auto;
@@ -47,15 +40,57 @@
   border: 0.4px solid rgb(29, 29, 29);
   border-radius: 8px;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
-.tool-card h3 {
+.muscle-tool-card h3 {
   color: #FDFDFD;
   margin-top: 10px;
   font-size: 20px;
 }
 
-p {
+.muscle-tools-section {
+  margin-bottom: 100px;
+}
+
+.muscle-tool-card p{
   color: #D2D2D2;
 }
+
+/*responsible*/
+.muscle-tool-card {
+  flex: 1;
+  max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .muscle-content-wrapper{
+    max-width: 1200px;
+    margin: 40px auto;
+    border: none;
+    padding: 40px;
+  }
+  .muscle-content-wrapper h1{
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  .muscle-tool-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .muscle-tool-card h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .muscle-tool-card p {
+    font-size: 14px;
+  }
+
+  .muscle-tools-section {
+    margin-bottom: 30px;
+  }
+}
+

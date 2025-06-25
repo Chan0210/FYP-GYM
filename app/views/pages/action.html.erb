@@ -1,87 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Action Page</title>
-  <%= stylesheet_link_tag 'header' %>
-  <%= stylesheet_link_tag 'action' %>
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <title>Main Page</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "action", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-<div class="content-wrapper">
+<div class="action-content-wrapper">
   <h1>Action</h1>
-  <div class="action-controls">
-
-    <div class="filter-dropdown">
-      <div class="filter-label">
+  <div class="action-action-controls">
+    <div class="action-filter-dropdown">
+      <button class="action-filter-btn">
         Filter <i class="fa-solid fa-sliders"></i>
-      </div>
-      <ul class="filter-options">
-        <li><%= link_to 'Chest', chest_path %></li>
-        <li><%= link_to 'Back', back_path %></li>
-        <li><%= link_to 'Arm', '#' %></li>
-        <li><%= link_to 'Leg', leg_path %></li>
-        <li><%= link_to 'Shoulder', '#' %></li>
+      </button>
+      <ul class="action-filter-options">
+        <li><%= link_to "All",   action_path %></li>
+        <li><%= link_to "Chest",   chest_path %></li>
+        <li><%= link_to "Back",    back_path  %></li>
+        <li><%= link_to "Arm",     arm_path   %></li>
+        <li><%= link_to "Leg",     leg_path   %></li>
+        <li><%= link_to "Shoulder", shoulder_path %></li>
       </ul>
     </div>
 
-    <input class="search-bar" type="text" placeholder="Search" />
+    <input class="action-search-bar" type="text" placeholder="Search" />
   </div>
 
-  <div class="actions-grid">
-    <div class="action-card">
-      <div class="card-header">
-        <span>Machine Pec Fly</span>
-        <button class="add-button"><i class="fa fa-plus"></i></button>
-      </div>
-      <div class="card-body">
-        <%= link_to bbp_path do %>
-          <%= image_tag 'barbell_bench_press.webp', alt: 'Barbell Bench Press' %>
+    <div class="action-actions-grid">
+      <div class="action-actions-grid">
+        <% @actions.each do |action| %>
+          <%= render(ActionCardComponent.new(action: action)) %>
         <% end %>
       </div>
     </div>
 
-    <div class="action-card">
-      <div class="card-header">
-        <span>Machine Pec Fly</span>
-        <button class="add-button"><i class="fa fa-plus"></i></button>
-      </div>
-      <div class="card-body">
-        <%= link_to bbp_path do %>
-          <%= image_tag 'barbell_bench_press.webp', alt: 'Barbell Bench Press' %>
-        <% end %>
-      </div>
-    </div>
 
-    <div class="action-card">
-      <div class="card-header">
-        <span>Machine Pec Fly</span>
-        <button class="add-button"><i class="fa fa-plus"></i></button>
-      </div>
-      <div class="card-body">
-        <%= link_to bbp_path do %>
-          <%= image_tag 'barbell_bench_press.webp', alt: 'Barbell Bench Press' %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="action-card">
-      <div class="card-header">
-        <span>Machine Pec Fly</span>
-        <button class="add-button"><i class="fa fa-plus"></i></button>
-      </div>
-      <div class="card-body">
-        <%= link_to bbp_path do %>
-          <%= image_tag 'barbell_bench_press.webp', alt: 'Barbell Bench Press' %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-  </footer>
 </div>
 </body>
 </html>

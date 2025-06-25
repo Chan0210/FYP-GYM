@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cart Page</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="cart.css">
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <title>Barbell Pronated Row</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "cart", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-
-<div class="content-wrapper">
+<div class="cart-content-wrapper">
   <h1>Cart</h1>
+
   <div class="cart-item">
     <input type="checkbox" />
-    <div class="item-image"><img src="img/Barbell Bench Press.webp"></div>
+    <div class="item-image">
+      <%= image_tag "barbell_bench_press.webp", alt: "Barbell Bench Press" %>
+    </div>
     <div class="item-title">Barbell Bench Press</div>
-    <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
+    <div class="delete-icon">
+      <i class="fa-solid fa-trash"></i>
+    </div>
   </div>
 
   <div class="cart-item">
     <input type="checkbox" checked />
-    <div class="item-image"><i class="fa-regular fa-image"></i></div>
+    <div class="item-image">
+      <i class="fa-regular fa-image"></i>
+    </div>
     <div class="item-title">Barbell Bench Press</div>
-    <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
+    <div class="delete-icon">
+      <i class="fa-solid fa-trash"></i>
+    </div>
   </div>
 
-  <div class="hr"></div>
+  <div class="cart-hr"></div>
 
-  <div class="next-button-wrapper">
-    <a href="proceed.html" class="add-button"><button class="next-button">Next</button></a>
-
+  <div class="cart-next-button-wrapper">
+    <%= link_to proceed_path, class: "cart-add-button" do %>
+      <button class="next-button">Next</button>
+    <% end %>
   </div>
 
-  <footer>
-    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-  </footer>
-  </main>
 </div>
-
 </body>
 </html>

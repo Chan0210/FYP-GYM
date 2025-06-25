@@ -8,47 +8,41 @@
 </head>
 
 <body>
-<div class="content-wrapper">
-  <h1>Push Up</h1>
-  <div class="video-section">
-    <div class="video-box">
-      <div class="video-row">
-        <video class="video-player" autoplay muted loop>
-          <source src="vid/male-Bodyweight-push-up-front.mp4" type="video/mp4" />
-        </video>
-
-        <video class="video-player" autoplay muted loop>
-          <source src="vid/male-Bodyweight-push-up-side.mp4" type="video/mp4" />
-        </video>
+<div class="actiondetail-content-wrapper">
+  <div class="actiondetail-header-row">
+    <h1>Push Up</h1>
+    <button class="actiondetail-add-button"><i class="fa fa-plus"></i></button>
+  </div>
+  <div class="actiondetail-video-section">
+    <div class="actiondetail-video-box">
+      <div class="actiondetail-video-row">
+        <%= video_tag("male-dumbbell-superman-front.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
+        <%= video_tag("male-dumbbell-superman-side.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
       </div>
 
-      <div class="instruction-list">
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">1</span></span>
+      <div class="actiondetail-instruction-list">
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">1</span></span>
           <p>Place your hands firmly on the ground, directly under shoulders.</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">2</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">2</span></span>
           <p>Flatten your back so your entire body is straight and slowly lower your body</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">3</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">3</span></span>
           <p>Draw shoulder blades back and down, keeping elbows tucked close to your body</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">4</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">4</span></span>
           <p>Exhale as you push back to the starting position.</p>
         </div>
       </div>
-
-      <button class="add-button">
-        <i class="fa fa-plus"></i>
-      </button>
     </div>
   </div>
 
-  <div class="youtube-section">
-    <div class="video-wrapper">
+  <div class="actiondetail-youtube-section">
+    <div class="actiondetail-video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/lxufUii4fd4"
         title="Barbell Bench Press"
@@ -59,7 +53,7 @@
     </div>
   </div>
 
-  <div class="description-box">
+  <div class="actiondetail-description-box">
     <h2>Push-Ups: Basics and alternatives</h2>
     <p>
       Push-ups are one of the most well-known fitness exercises ever. Everyone knows them, and almost everyone has done them at least once in gym class. The basic movement goes like this: With your arms extended and your body straight, you support yourself on your hands and toes. By bending and extending your arms, you primarily move your upper body.

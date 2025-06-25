@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Edit Routine</title>
-  <%= stylesheet_link_tag 'header', media: 'all' %>
-  <%= stylesheet_link_tag 'trackingedit', media: 'all' %>
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <title>Edit Page</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "trackingedit", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-
-<div class="content-wrapper">
-  <div class="container">
+<div class="er-content-wrapper">
+  <div class="er-container">
     <h1>Edit Your Routine</h1>
-    <div class="card">
-      <div class="top-row">
-        <div class="field">
-          <label for="date">Date:</label>
-          <input type="text" id="date" />
+    <div class="er-card">
+      <div class="er-top-row">
+        <div class="er-field">
+          <label for="date">Date :</label>
+          <input type="date" id="date" />
         </div>
-        <div class="field">
-          <label for="time">Time used:</label>
-          <input type="text" id="time" />
+        <div class="er-field">
+          <label for="timeused">Time used (minutes) :</label>
+          <input type="number" id="timeused" name="timeused" min="0" placeholder="e.g. 45">
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 1</span>
-        <div class="set-input">
-          <label>Enter times of Set:</label>
-          <input type="text" />
+        <div class="er-set-input">
+          <label>Number of Set :</label>
+          <input type="number" />
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 2</span>
-        <div class="set-input">
-          <label>Enter times of Set:</label>
-          <input type="text" />
+        <div class="er-set-input">
+          <label>Number of Set :</label>
+          <input type="number" />
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 3</span>
-        <div class="set-input">
-          <label>Enter times of Set:</label>
-          <input type="text" />
+        <div class="er-set-input">
+          <label>Number of Set :</label>
+          <input type="number" />
         </div>
       </div>
 
-      <div class="button-wrapper">
-        <%= link_to "Save", pages_routine_detail_path, class: "done-button" %>
+      <div class="er-button-wrapper">
+        <%= link_to "Save", routine_detail_path, class: "er-done-button" %>
       </div>
     </div>
   </div>

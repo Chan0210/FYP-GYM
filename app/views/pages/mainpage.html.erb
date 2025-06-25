@@ -2,70 +2,67 @@
 <html>
 <head>
   <title>Main Page</title>
-  <%= stylesheet_link_tag 'header', media: 'all' %>
-  <%= stylesheet_link_tag 'mainpage', media: 'all' %>
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "mainpage", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div class="content-wrapper">
-  <main class="main-content">
-    <section class="tools-section">
-      <div class="tool-card">
-        <a href="<%= bmi_path %>">
-          <%= image_tag 'bmi_pic.jpg', alt: 'GYMWIKI Logo' %>
-        </a>
-        <a href="<%= bmi_path %>"><h3>BMI Calculator</h3></a>
+<div class="mainpage-content-wrapper">
+  <main class="mainpage-main-content">
+    <section class="mainpage-tools-section">
+      <div class="mainpage-tool-card">
+        <%= link_to image_tag("bmi_pic.jpg", alt: "GYMWIKI Logo"), bmi_path %>
+        <%= link_to bmi_path do %>
+          <h3>BMI Calculator</h3>
+        <% end %>
       </div>
-      <div class="tool-card">
-        <a href="<%= calorie_path %>">
-          <%= image_tag 'cals_pic.jpg', alt: 'GYMWIKI Logo' %>
-        </a>
-        <a href="<%= calorie_path %>"><h3>Calorie Calculator</h3></a>
+      <div class="mainpage-tool-card">
+        <%= link_to image_tag("cals_pic.jpg", alt: "GYMWIKI Logo"), calorie_path %>
+        <%= link_to calorie_path do %>
+          <h3>Calorie Calculator</h3>
+        <% end %>
       </div>
     </section>
 
-    <section class="muscle-section">
+    <section class="mainpage-muscle-section">
       <h2>Muscle</h2>
-      <hr class="muscle-line">
-      <div class="muscle-grid">
-        <div class="muscle-box">
+      <div class="mainpage-hr"></div>
+      <div class="mainpage-muscle-grid">
+        <div class="mainpage-muscle-box">
           <%= link_to chest_path do %>
-            <%= image_tag 'chest.webp', alt: 'Chest' %>
-            <p class="image-caption">Chest</p>
+            <%= image_tag("chest.webp", alt: "GYMWIKI Logo") %>
+            <p class="mainpage-image-caption">Chest</p>
           <% end %>
         </div>
-        <div class="muscle-box">
-          <a href="<%= back_path %>">
-            <%= image_tag 'back.webp', alt: 'Back' %>
-            <p class="image-caption">Back</p>
-          </a>
+        <div class="mainpage-muscle-box">
+          <%= link_to back_path do %>
+            <%= image_tag("back.webp", alt: "GYMWIKI Logo") %>
+            <p class="mainpage-image-caption">Back</p>
+          <% end %>
         </div>
-        <div class="muscle-box">
-          <a href="<%= leg_path %>">
-            <%= image_tag 'leg.png', alt: 'Leg' %>
-            <p class="image-caption">Leg</p>
-          </a>
+        <div class="mainpage-muscle-box">
+          <%= link_to leg_path do %>
+            <%= image_tag("leg.jpg", alt: "GYMWIKI Logo") %>
+            <p class="mainpage-image-caption">Leg</p>
+          <% end %>
         </div>
-        <div class="muscle-box">
-          <a href="<%= arm_path %>">
-            <%= image_tag 'arm.webp', alt: 'Arm' %>
-            <p class="image-caption">Arm</p>
-          </a>
+        <div class="mainpage-muscle-box">
+          <%= link_to arm_path do %>
+            <%= image_tag("arm.webp", alt: "GYMWIKI Logo") %>
+            <p class="mainpage-image-caption">Arm</p>
+          <% end %>
         </div>
-        <div class="muscle-box">
-          <a href="<%= shoulder_path %>">
-            <%= image_tag 'Shoulder.webp', alt: 'Shoulder' %>
-            <p class="image-caption">Shoulder</p>
-          </a>
+        <div class="mainpage-muscle-box">
+          <%= link_to shoulder_path do %>
+            <%= image_tag("Shoulder.webp", alt: "GYMWIKI Logo") %>
+            <p class="mainpage-image-caption">Shoulder</p>
+          <% end %>
         </div>
       </div>
     </section>
-
-    <footer>
-      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-    </footer>
   </main>
 </div>
+
 </body>
 </html>

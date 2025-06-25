@@ -1,214 +1,356 @@
 body {
-    margin: 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #000;
-  }
-
-  header {
-    background-color: #000;
-    width: 100%;
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-  }
-
-header, nav, .wrapper {
-  border: none;
-  box-shadow: none;
-  background-color: #000; /* 确保黑底 */
+  margin: 0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #000;
 }
 
-  .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 20px;
-    border: none;
-  }
+.header-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
 
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .logo {
-    flex-shrink: 0;
-  }
-
-  .logo img {
-    height: 40px;
-    border-radius: 30px;
-  }
-
-  .nav-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-.nav-links li {
+.header-wrapper nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
 
-  .nav-links li a {
-    text-decoration: none;
-    color: #D2D2D2;
-    font-size: 15px;
-  }
-
-  .nav-links li a:hover {
-    color: white;
-  }
-
-  .auth-buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-
-.login-btn {
-  margin-top: 0;
-  margin-left: 12px;
-  background-color: #1a1a1a;
-  color: white;
-  border: 2px solid #1a1a1a;
+.header-logo img {
+  height: 40px;
+  border-radius: 30px;
 }
 
-.signup-btn {
-  background-color: #f1ff00;
-  color: black;
-  border: 2px solid #f1ff00;
-}
-
-.login-btn,
-.signup-btn {
-  display: inline-flex;
+.header-nav-main {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 35px;
-  min-width: 80px;
-  padding: 0 16px;
-  font-size: 14px;
-  font-weight: 600;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.header-nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-links li a {
+  text-decoration: none;
+  color: #D2D2D2;
+  font-size: 15px;
+}
+
+.header-nav-links li a:hover {
+  color: white;
+}
+
+/* 让 “Tools” 看起来就像普通导航链接 */
+.header-submenu-label {          /* 或者 .submenu-label —— 按你页面中的类名保持一致 */
+  color: #D2D2D2;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.header-submenu-label:hover {
+  color: #ffffff;               /* 悬停时变白，与其他 a:hover 一致 */
+}
+
+
+.header-auth-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-login-btn {
+  padding: 8px 20px;
+  border: 0.6px solid #7E7E7E;
   border-radius: 6px;
+  background: #101010;
+  color: #D2D2D2;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-login-btn:hover {
+  background-color: #1f1f1f;
+
+}
+
+.header-signup-btn {
+  padding: 8px 20px;
+  background-color: #E1FF00;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.header-signup-btn:hover {
+  opacity: 0.7;
+  background-color: #d5ff00;
+}
+
+
+.header-nav-links li {
+  position: relative;
+}
+
+.header-has-megamenu {
+  position: relative;
+}
+
+.header-has-megamenu:hover .header-megamenu {
+  display: flex;
+}
+
+.header-megamenu {
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  background: #111;
+  padding: 20px 30px;
+  border-radius: 12px;
+  gap: 30px;
+  z-index: 999;
+  color: #fff;
+}
+
+.header-megamenu .menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-menu-column a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.header-menu-column a:hover {
+  color: #E1FF00;
+}
+
+.header-nav-links li:hover ul {
+  display: block;
+}
+
+.header-nav-links li ul li {
+  padding: 8px 20px;
+}
+
+.header-nav-links li ul li a {
+  color: #D2D2D2;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.header-nav-links li ul li a:hover {
+  background-color: #2a2a2a;
+}
+
+.header-nav-links li > a {
+  position: relative;
+  padding: 5px 0;
+}
+
+/*footer*/
+.footer-footer {
+  color: #eee;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-team {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-about h4,
+.footer-links h4,
+.footer-team h4{
+font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
   text-align: center;
-  vertical-align: middle;
-  box-sizing: border-box;
+  border-top: 1px solid #333;
+  width: 80%;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  color: #888;
+}
+
+
+.footer-about p {
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
 }
 
 
 
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .nav-main {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 0;
-      gap: 10px;
-    }
+/*responsible*/
+
+.header-nav-toggle,
+.header-submenu-toggle {
+  display: none;
+}
+
+.header-burger {
+  display: none;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+.header-burger span {
+  position: absolute;
+  left: 0;
+  width: 80%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.header-burger span:nth-child(1) { top: 0; }
+.header-burger span:nth-child(2) { top: 8px; }
+.header-burger span:nth-child(3) { top: 16px; }
+
+
+@media (max-width: 891px) {
+
+  .header-wrapper nav {
+    flex-wrap: nowrap;
+  }
+  .header-nav-main {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    z-index: 1000;
   }
 
-  /* Dropdown Tools 菜单 */
-.nav-links li {
+  .header-nav-toggle:checked ~ .header-nav-main {
+    transform: translateX(0);
+  }
+
+
+  .header-burger {
+    display: block;
+  }
+
+  .header-nav-toggle:checked + .header-burger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .header-nav-toggle:checked + .header-burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .header-nav-toggle:checked + .header-burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .header-nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-submenu-label {
+    cursor: pointer;
+    display: inline-block;
+    color: #D2D2D2;
     position: relative;
   }
 
-  .has-megamenu {
-    position: relative;
+  .header-submenu-label + .header-megamenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
   }
 
-  .has-megamenu:hover .megamenu {
-    display: flex;
-  }
-
-  .megamenu {
-    display: none;
-    position: absolute;
-    top: 27px;
-    left: 0;
-    background: #111;
-    padding: 20px 30px;
-    border-radius: 12px;
-    gap: 30px;
-    z-index: 999;
-    color: #fff;
-  }
-
-  .megamenu .menu-column {
+  .header-submenu-toggle:checked + .header-submenu-label + .header-megamenu {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-  }
-
-  .menu-column a {
-    display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.5;
-    transition: all 0.3s ease;
   }
 
-  .menu-column a:hover {
-    color: #E1FF00;
+  .header-megamenu {
+    position: static;
+    padding: 0;
+    background: none;
+  }
+  .header-has-megamenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .nav-links li:hover ul {
-    display: block;
+  .header-megamenu {
+    align-items: center;
   }
+}
 
-  .nav-links li ul li {
-    padding: 8px 20px;
-  }
-
-  .nav-links li ul li a {
-    color: #D2D2D2;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-  }
-
-  .nav-links li ul li a:hover {
-    background-color: #2a2a2a;
-  }
-
-  .nav-links li > a {
-    position: relative;
-    padding: 5px 0;
-  }
-
-  /*框架 */
-
-  .content-wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    border: 1px solid #5D5D5D;
-    padding: 40px;
-    background-color: #000;
-    border-radius: 6px;
-  }
-
-  footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    color: #aaa;
-    font-size: 14px;
-  }

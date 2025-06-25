@@ -1,27 +1,74 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag "login", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
+</head>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<body>
+<header>
+  <div class="login-wrapper">
+    <nav>
+      <div class="login-logo">
+        <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), mainpage_path %>
+      </div>
+      <div class="login-auth-buttons">
+        <%= link_to "Sign Up", new_user_registration_path, class: "login-signup-btn" %>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="login-content-wrapper">
+  <div class="login-login">
+    <h1>Log in to <span style="color: #E1FF00;">GYMWIKI</span></h1>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <% if flash[:alert] %>
+        <div class="alert"><%= flash[:alert] %></div>
+      <% end %>
+
+      <label for="email">
+        <span>Email</span>
+        <i class="fa-solid fa-envelope"></i>
+      </label>
+      <%= f.email_field :email, id: "email", required: true %>
+
+      <label for="password">
+        <span>Password</span>
+        <i class="fa-solid fa-lock"></i>
+      </label>
+      <div class="login-input-wrapper">
+        <%= f.password_field :password, id: "password", required: true %>
+        <button type="button" class="login-toggle-password-btn">
+          <i class="fa-solid fa-eye-low-vision"></i>
+        </button>
+      </div>
+
+      <div class="login-custom-line"></div>
+
+      <%= f.submit "Log In", class: "login-login-btn" %>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+  <footer>
+    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
+  </footer>
+</div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+<script>
+    const toggleBtn = document.querySelector('.login-toggle-password-btn');
+    const toggleIcon = toggleBtn.querySelector('i');
+    const passwordInput = document.getElementById('password');
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    toggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
 
-<%= render "devise/shared/links" %>
-<!--login-->
+        toggleIcon.classList.toggle('fa-eye');
+        toggleIcon.classList.toggle('fa-eye-low-vision');
+    });
+</script>
+</body>
+</html>

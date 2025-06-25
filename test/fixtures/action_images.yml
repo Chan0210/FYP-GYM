@@ -2,8 +2,12 @@
 
 one:
   action: one
-  image_url: MyString
+  media_url: MyString
+  media_type: MyString
+  position: 1
 
 two:
   action: two
-  image_url: MyString
+  media_url: MyString
+  media_type: MyString
+  position: 1

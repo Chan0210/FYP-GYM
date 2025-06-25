@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Routine Detail Page</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="routine_detail.css">
+  <title>Routine Detail</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "routine_detail", media: "all" %>
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1 class="routine-title">Routine Detail</h1>
-
-    <div class="routine-box">
-      <div class="routine-header">
+<div class="rd-content-wrapper">
+  <h1>Routine Detail</h1>
+  <main class="rd-main-content">
+    <div class="rd-routine-box">
+      <div class="rd-routine-header">
         <h2>Name of Routine</h2>
-        <p class="routine-time">Time used: 2h 45min</p>
+        <p class="rd-routine-time">Time used: 2h 45min</p>
       </div>
-      <p class="routine-date">Date: 21/4/2025</p>
+      <p class="rd-routine-date">Date: 21/4/2025</p>
 
-      <div class="action-card">
-        <div class="action-left">Action 1</div>
-        <div class="action-right">
+      <div class="rd-action-card">
+        <div class="rd-action-left">Action 1</div>
+        <div class="rd-action-right">
           <span>Number of Set：4</span>
           <span>Number of Reps：10</span>
           <span>Calories Used: 356 kcal</span>
         </div>
       </div>
 
-      <div class="action-card">
-        <div class="action-left">Action 1</div>
-        <div class="action-right">
+      <div class="rd-action-card">
+        <div class="rd-action-left">Action 1</div>
+        <div class="rd-action-right">
           <span>Number of Set：6</span>
           <span>Number of Reps：10</span>
           <span>Calories Used: 356 kcal</span>
         </div>
       </div>
 
-      <div class="action-card">
-        <div class="action-left">Action 1</div>
-        <div class="action-right">
+      <div class="rd-action-card">
+        <div class="rd-action-left">Action 1</div>
+        <div class="rd-action-right">
           <span>Number of Set：4</span>
           <span>Number of Reps：10</span>
           <span>Calories Used: 356 kcal</span>
         </div>
       </div>
 
-      <p class="total-calories">Total Calories Used: 1068 kcal</p>
+      <p class="rd-total-calories">Total Calories Used: 1068 kcal</p>
 
-      <div class="routine-buttons">
-
-        <a href="editroutine.html"><button class="edit-btn">Edit</button></a>
-        <a href="routine.html"><button class="done-btn">Done</button></a>
+      <div class="rd-routine-buttons">
+        <%= link_to editroutine_path do %>
+          <button class="rd-edit-btn">Edit</button>
+        <% end %>
+        <%= link_to routine_path do %>
+          <button class="rd-done-btn">Done</button>
+        <% end %>
       </div>
     </div>
-
-    <footer>
-      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-    </footer>
   </main>
 </div>
 

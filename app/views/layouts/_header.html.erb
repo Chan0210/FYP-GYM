@@ -1,40 +1,64 @@
 <header>
-  <div class="wrapper">
+  <div class="header-wrapper">
     <nav>
-      <div class="logo">
-        <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), root_path %>
+      <div class="header-logo">
+        <%= link_to image_tag("logo.png", alt: "GYMWIKI Logo"), mainpage_path %>
       </div>
 
-      <div class="nav-main">
-        <ul class="nav-links">
+      <input type="checkbox" id="nav-toggle" class="header-nav-toggle" />
+      <label for="nav-toggle" class="header-burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="header-nav-main">
+        <ul class="header-nav-links">
           <li><%= link_to "Action", action_path %></li>
-          <li class="has-megamenu">
-            <span class="menu-title">Tools</span>
-            <div class="megamenu">
-              <div class="menu-column">
+          <li class="header-has-megamenu">
+            <input type="checkbox" id="submenu-toggle" class="header-submenu-toggle" />
+            <label for="submenu-toggle" class="header-submenu-label">Tools</label>
+
+            <div class="header-megamenu">
+              <div class="header-menu-column">
                 <%= link_to bmi_path do %>
-                  <i class="fa-solid fa-weight-scale"></i>
-                  <strong>BMI Calculator</strong><br>
+                  <i class="fa-solid fa-weight-scale"></i><strong>BMI Calculator</strong>
                 <% end %>
               </div>
-              <div class="menu-column">
+              <div class="header-menu-column">
                 <%= link_to calorie_path do %>
-                  <i class="fa-solid fa-scale-balanced"></i>
-                  <strong>Calories Calculator</strong><br>
+                  <i class="fa-solid fa-scale-balanced"></i><strong>Calories Calculator</strong>
                 <% end %>
               </div>
             </div>
           </li>
-          <li><%= link_to "Cart", cart_path %></li>
-          <li><%= link_to "Routines", routine_path %></li>
-          <li><%= link_to "Workout History", workout_history_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Cart", cart_path %></li>
+            <li><%= link_to "Routines", routine_path %></li>
+            <li><%= link_to "Workout History", workout_history_path %></li>
+          <% else %>
+            <li><a href="#" onclick="alertLogin()">Cart</a></li>
+            <li><a href="#" onclick="alertLogin()">Routines</a></li>
+            <li><a href="#" onclick="alertLogin()">Workout History</a></li>
+          <% end %>
         </ul>
 
-        <div class="auth-buttons">
-          <%= link_to "Log In", pages_login_path, class: "login-btn" %>
-          <%= link_to "Sign Up", signup_path, class: "signup-btn" %>
-        </div>
+        <% if current_user %>
+          <div class="header-auth-buttons">
+            <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "header-logout-btn" %>
+          </div>
+        <% else %>
+          <div class="header-auth-buttons">
+            <%= link_to "Log In", new_user_session_path, class: "header-login-btn" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "header-signup-btn" %>
+          </div>
+        <% end %>
+
+
       </div>
     </nav>
   </div>
 </header>
+<script>
+    function alertLogin() {
+        alert("Please log in or sign up to access this feature.");
+    }
+</script>

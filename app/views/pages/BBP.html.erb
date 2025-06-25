@@ -7,35 +7,30 @@
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="content-wrapper">
-  <div class="header-row">
+<div class="actiondetail-content-wrapper">
+  <div class="actiondetail-header-row">
     <h1>Barbell Bench Press</h1>
-    <button class="add-button"><i class="fa fa-plus"></i></button>
+    <button class="actiondetail-add-button"><i class="fa fa-plus"></i></button>
   </div>
 
-  <div class="video-section">
-    <div class="video-box">
-      <div class="video-row">
-        <video class="video-player" autoplay muted loop>
-          <source src="vid/male-barbell-bench-press-front.mp4" type="video/mp4" />
-        </video>
-
-        <video class="video-player" autoplay muted loop>
-          <source src="vid/male-barbell-bench-press-side_KciuhbB.mp4" type="video/mp4" />
-        </video>
+  <div class="actiondetail-video-section">
+    <div class="actiondetail-video-box">
+      <div class="actiondetail-video-row">
+        <%= video_tag("male-dumbbell-superman-front.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
+        <%= video_tag("male-dumbbell-superman-side.mp4", autoplay: true, muted: true, loop: true, class: "actiondetail-video-player") %>
       </div>
 
-      <div class="instruction-list">
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">1</span></span>
+      <div class="actiondetail-instruction-list">
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">1</span></span>
           <p>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">2</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">2</span></span>
           <p>Lower the bar to your mid chest</p>
         </div>
-        <div class="instruction-item">
-          <span class="step-number"><span class="num">3</span></span>
+        <div class="actiondetail-instruction-item">
+          <span class="actiondetail-step-number"><span class="actiondetail-num">3</span></span>
           <p>Raise the bar until you've locked your elbows.</p>
         </div>
       </div>
@@ -44,8 +39,8 @@
   </div>
 
 
-  <div class="youtube-section">
-    <div class="video-wrapper">
+  <div class="actiondetail-youtube-section">
+    <div class="actiondetail-video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/ktv6LLJaxC0"
         title="Barbell Bench Press"
@@ -56,7 +51,7 @@
     </div>
   </div>
 
-  <div class="description-box">
+  <div class="actiondetail-description-box">
     <h2>Bench Press: Basics and alternatives</h2>
     <p>
       The bench press is a crucial core exercise not only in bodybuilding but also in various other strength-related sports[1]. While lying on a flat bench, you press a barbell vertically upwards from your chest.
@@ -95,9 +90,6 @@
     <p>Avoid lowering the weight too quickly. You should bring the bar back up as quickly as possible, but you must not bounce it off your chest with momentum. Not only can this cause injury, but it also reduces the overall impact compared to performing the exercise correctly.<br><br>
       Ensure you maintain the correct posture for your elbows and shoulders/shoulder blades, as described above. Otherwise, excessive stress may be placed on the joints, which can be problematic in the long run. Performing the exercise incorrectly also reduces the training effect on the chest muscles.</p>
   </div>
-  <footer>
-    <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-  </footer>
   </main>
 </div>
 

@@ -25,9 +25,10 @@
   <body>
   <% if controller_name == 'admin' %>
     <%= render 'layouts/admin_header' %>
-  <% else %>
+  <% elsif controller_name == 'pages'%>
     <%= render 'layouts/header' %>
   <% end %>
     <%= yield %>
+  <%= render 'layouts/footer'%>
   </body>
 </html>

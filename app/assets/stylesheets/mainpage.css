@@ -1,106 +1,143 @@
-.main-content {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 40px;
-    background-color: #000;
-    color: #fff;
-  margin-top: -30px;
-  }
-
-.main-content a{
-    text-decoration: none;
+mainpage-content-wrapper{
+  max-width: 1200px;
+  margin: 40px auto;
+  border: 0.6px solid #5D5D5D;
+  padding: 40px;
+  background-color: #000;
+  border-radius: 6px;
+}
+.mainpage-main-content {
+  color: #fff;
 }
 
-.main-content a h3{
-    color: #fff;
+.mainpage-main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
 }
 
-.main-content a h3:hover{
-    color: #a5a5a5;
+.mainpage-main-content a{
+  text-decoration: none;
 }
 
-.menu-title {
-  color: #D2D2D2;
-  font-size: 15px;
+.mainpage-main-content a h3{
+  color: #fff;
+
+}
+
+.mainpage-main-content a h3:hover{
+  color: #a5a5a5;
+}
+
+.mainpage-tools-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.mainpage-tool-card {
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.mainpage-tool-card img {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.mainpage-tool-card img:hover,
+.mainpage-muscle-box img:hover {
+  filter: grayscale(100%) brightness(70%);
+  transition: filter 0.3s ease;
   cursor: pointer;
-  display: inline-block;
-  padding: 5px 0;
 }
 
-.menu-title:hover {
-  color: white;
+.mainpage-tool-card h3 {
+  color: #FDFDFD;
+  margin-top: 10px;
+  font-size: 20px;
 }
-  
-  .tools-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  .tool-card {
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1;
-    text-align: center;
-  }
-  
-  .tool-card img {
-    width: 100%;
-    height: 300px;
-    background-color: #ccc;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .tool-card h3 {
-    color: #FDFDFD;
-    margin-top: 10px;
-    font-size: 20px;
-  }
 
-.muscle-line {
+.mainpage-hr {
   border: 0;
   border-top: 0.3px solid #5D5D5D;
-  margin: 0 0 20px 0;
+  margin-bottom: 30px;
 }
-  
-  .muscle-section h2 {
-    color: #fff;
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .muscle-grid {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+
+.mainpage-muscle-section h2 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+
+.mainpage-muscle-grid {
+  display: flex;
+  gap: 43px;
+  flex-wrap: wrap;
+}
+
+.mainpage-muscle-box img{
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.mainpage-image-caption {
+  margin-top: 8px;
+  color: #D2D2D2;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*responsible*/
+@media (max-width: 768px) {
+
+  .mainpage-tools-section {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: -20px;
   }
 
-.muscle-box{
-  margin-top: 10px;
-}
-  
-  .muscle-box img{
+  .mainpage-tool-card img {
+    height: 100px;
+  }
+
+  .mainpage-muscle-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .mainpage-muscle-box {
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainpage-muscle-box img {
     width: 120px;
     height: 120px;
-    background-color: #ffffff;
-    border-radius: 8px;
   }
 
-
-  .image-caption {
-    margin-top: 8px;
-    color: #D2D2D2;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  footer {
+  .mainpage-image-caption {
+    font-size: 16px;
     text-align: center;
-    color: #888;
-    font-size: 14px;
-    margin-top: 60px;
   }
-  
+
+  .mainpage-main-content {
+    padding: 0 20px;
+  }
+
+  .mainpage-content-wrapper {
+    padding: 20px;
+  }
+}

@@ -2,46 +2,43 @@
 <html>
 <head>
   <title>Leg</title>
-  <%= stylesheet_link_tag 'header', media: 'all' %>
-  <%= stylesheet_link_tag 'muscle', media: 'all' %>
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "action", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
+<div class="action-content-wrapper">
+  <h1>Leg</h1>
+  <div class="action-action-controls">
+    <div class="action-filter-dropdown">
+      <button class="action-filter-btn">
+        Filter <i class="fa-solid fa-sliders"></i>
+      </button>
+      <ul class="action-filter-options">
+        <li><%= link_to "All",   action_path %></li>
+        <li><%= link_to "Chest",   chest_path %></li>
+        <li><%= link_to "Back",    back_path  %></li>
+        <li><%= link_to "Arm",     arm_path   %></li>
+        <li><%= link_to "Leg",     leg_path   %></li>
+        <li><%= link_to "Shoulder", shoulder_path %></li>
+      </ul>
+    </div>
 
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1>Leg</h1>
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to bs_path do %>
-          <h3>Barbell Squat</h3>
-          <%= image_tag 'Barbell Squat.webp', alt: 'Barbell Squat' %>
-        <% end %>
-        <p>The classic leg exercise in strength training is the barbell squat...</p>
-      </div>
-    </section>
+    <input class="action-search-bar" type="text" placeholder="Search" />
+  </div>
 
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to ccp_path do %>
-          <h3>Machine Leg Press</h3>
-          <%= image_tag 'Machine Leg Press.webp', alt: 'Machine Leg Press' %>
+  <div class="action-actions-grid">
+    <div class="action-actions-grid">
+      <% if @actions.present? %>
+        <% @actions.each do |action| %>
+          <%= render(ActionCardComponent.new(action: action)) %>
         <% end %>
-        <p>...seated leg press can exist in two other variants...</p>
-      </div>
-    </section>
-
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to pu_path do %>
-          <h3>Machine Hamstring Curl</h3>
-          <%= image_tag 'Machine Hamstring Curl.webp', alt: 'Machine Hamstring Curl' %>
-        <% end %>
-        <p>...under the leg pad, making sure it’s above your heel...</p>
-      </div>
-    </section>
-  </main>
+      <% else %>
+        <p style="text-align:center; margin-top: 20px;">No actions found for Chest.</p>
+      <% end %>
+    </div>
+  </div>
 
 </div>
 </body>

@@ -9,52 +9,51 @@
 
 <body>
 
-<div class="content-wrapper">
-  <div class="container">
+<div class="er-content-wrapper">
+  <div class="er-container">
     <h1>Track Your Routine</h1>
-    <div class="card">
-      <div class="top-row">
-        <div class="field">
+    <div class="er-card">
+      <div class="er-top-row">
+        <div class="er-field">
           <label for="date">Date :</label>
-          <input type="text" id="date" />
+          <input type="date" id="date" />
         </div>
-        <div class="field">
-          <label for="time">Time used :</label>
-          <input type="text" id="time" />
+        <div class="er-field">
+          <label for="timeused">Time used (minutes) :</label>
+          <input type="number" id="timeused" name="timeused" min="0" placeholder="e.g. 45">
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 1</span>
-        <div class="set-input">
+        <div class="er-set-input">
           <label>Number of Set :</label>
           <input type="text" />
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 2</span>
-        <div class="set-input">
+        <div class="er-set-input">
           <label>Number of Set :</label>
           <input type="text" />
         </div>
       </div>
 
-      <div class="action-box">
+      <div class="er-action-box">
         <span>Action 3</span>
-        <div class="set-input">
+        <div class="er-set-input">
           <label>Number of Set :</label>
           <input type="text" />
         </div>
       </div>
 
-      <div class="button-wrapper">
-        <%= link_to 'Done', routine_detail_path, class: 'done-button' %>
+      <div class="er-button-wrapper">
+        <%= link_to 'Done', routine_detail_path, class: 'er-done-button' %>
       </div>
+
     </div>
   </div>
 </div>
-
-
 </body>
 </html>

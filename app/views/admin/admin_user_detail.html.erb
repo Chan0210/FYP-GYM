@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin User Detail Page</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="admin_user_detail.css">
+  <title>Admin User Detail</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "admin_user_detail", media: "all" %>
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1 class="user-data-title">User Data</h1>
-
-    <table class="user-detail-table">
+<div class="aud-content-wrapper">
+  <h1>User Data</h1>
+  <main class="aud-main-content">
+    <table class="aud-user-detail-table">
       <thead>
       <tr>
         <th>No</th>
@@ -33,18 +31,17 @@
       <tr><td>8</td><td>Text</td><td>Text</td><td>Text</td></tr>
       <tr><td>9</td><td>Text</td><td>Text</td><td>Text</td></tr>
       <tr><td>10</td><td>Text</td><td>Text</td><td>Text</td></tr>
-      <!-- 更多行可复制 -->
       </tbody>
     </table>
 
-    <div class="user-summary">
+    <div class="aud-user-summary">
       <p>Total Time： </p>
       <p>Total Calories： </p>
     </div>
 
-    <div class="center-button">
-      <%= link_to admin_user_data_path, class: 'arrow-link' do %>
-        <button class="back-btn">Back</button>
+    <div class="aud-right-button">
+      <%= link_to admin_user_data_path, class: "aud-arrow-link" do %>
+        <button class="aud-back-btn">Back</button>
       <% end %>
     </div>
 
@@ -53,6 +50,5 @@
     </footer>
   </main>
 </div>
-
 </body>
 </html>

@@ -2,49 +2,47 @@
 <html>
 <head>
   <title>Edit Action</title>
-  <%= stylesheet_link_tag 'header', media: 'all' %>
-  <%= stylesheet_link_tag 'action', media: 'all' %>
-  <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "action", media: "all" %>
+  <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-
-<div class="content-wrapper">
+<div class="action-content-wrapper">
   <h1>Edit Action</h1>
 
-  <div class="action-controls">
-    <div class="filter-dropdown">
-      <button class="filter-btn">Filter <i class="fa-solid fa-sliders"></i></button>
-      <ul class="filter-options">
-        <li><%= link_to 'Chest', pages_Chest_path %></li>
-        <li><%= link_to 'Back', back_path %></li>
-        <li><%= link_to 'Arm', pages_Chest_path %></li> <!-- Replace with actual arm path helper -->
-        <li><%= link_to 'Leg', pages_leg_path %></li>
-        <li><%= link_to 'Shoulder', pages_Chest_path %></li> <!-- Replace with actual shoulder path helper -->
+  <div class="action-action-controls">
+    <div class="action-filter-dropdown">
+      <button class="action-filter-btn">
+        Filter <i class="fa-solid fa-sliders"></i>
+      </button>
+      <ul class="action-filter-options">
+        <li><%= link_to "Chest", chest_path %></li>
+        <li><%= link_to "Back", back_path %></li>
+        <li><%= link_to "Arm", arm_path %></li>
+        <li><%= link_to "Leg", leg_path %></li>
+        <li><%= link_to "Shoulder", shoulder_path %></li>
       </ul>
     </div>
-    <input class="search-bar" type="text" placeholder="Search" />
+    <input class="action-search-bar" type="text" placeholder="Search" />
   </div>
 
-  <div class="actions-grid">
-    <% 6.times do %>
-      <div class="action-card">
-        <div class="card-header">
+  <div class="action-actions-grid">
+    <% 4.times do %>
+      <div class="action-action-card">
+        <div class="action-card-header">
           <span>Machine Pec Fly</span>
-          <%= link_to pages_edit_action_path, class: "add-button" do %>
+          <%= link_to adminedit_path, class: "action-add-button" do %>
             <i class="fa-solid fa-pen"></i>
           <% end %>
         </div>
-        <div class="card-body">
-          <%= link_to '/bbp' do %>
-            <%= image_tag 'Barbell Bench Press.webp' %>
+        <div class="action-card-body">
+          <%= link_to bbp_path do %>
+            <%= image_tag "barbell_bench_press.webp", alt: "Barbell Bench Press" %>
           <% end %>
         </div>
       </div>
     <% end %>
-
-
   </div>
 </div>
 </body>

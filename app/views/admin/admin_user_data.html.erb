@@ -2,18 +2,16 @@
 <html>
 <head>
   <title>Admin User Data Page</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="admin_user_data.css">
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "admin_user_data", media: "all" %>
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1 class="user-data-title">User Data</h1>
-
-    <table class="user-table">
+<div class="audt-content-wrapper">
+  <h1>User Data</h1>
+  <main class="audt-main-content">
+    <table class="audt-user-table">
       <thead>
       <tr>
         <th>No</th>
@@ -28,10 +26,10 @@
         <td>1</td>
         <td>John Doe</td>
         <td>john@example.com</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td><button class="audt-delete-btn">Delete</button></td>
         <td>
-          <%= link_to admin_user_detail_path, class: 'arrow-link' do %>
-            <button class="check-btn">Check Data</button>
+          <%= link_to admin_user_detail_path, class: "audt-arrow-link" do %>
+            <button class="audt-check-btn">Check Data</button>
           <% end %>
         </td>
       </tr>
@@ -39,10 +37,10 @@
         <td>2</td>
         <td>Jane Smith</td>
         <td>jane@example.com</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td><button class="audt-delete-btn">Delete</button></td>
         <td>
-          <%= link_to admin_user_detail_path, class: 'arrow-link' do %>
-            <button class="check-btn">Check Data</button>
+          <%= link_to admin_user_detail_path, class: "audt-arrow-link" do %>
+            <button class="audt-check-btn">Check Data</button>
           <% end %>
         </td>
       </tr>
@@ -50,10 +48,10 @@
         <td>3</td>
         <td>David Lee</td>
         <td>david@example.com</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td><button class="audt-delete-btn">Delete</button></td>
         <td>
-          <%= link_to admin_user_detail_path, class: 'arrow-link' do %>
-            <button class="check-btn">Check Data</button>
+          <%= link_to admin_user_detail_path, class: "audt-arrow-link" do %>
+            <button class="audt-check-btn">Check Data</button>
           <% end %>
         </td>
       </tr>

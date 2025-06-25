@@ -1,11 +1,24 @@
-.routine-title {
+.rd-content-wrapper{
+  max-width: 1200px;
+  margin: 40px auto;
+  border: 0.6px solid #5D5D5D;
+  padding: 40px;
+  background-color: #000;
+  border-radius: 6px;
+}
+
+.rd-content-wrapper h1{
+  color: #E1FF00;
+}
+
+.rd-routine-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
   color: #fff;
 }
 
-.routine-box {
+.rd-routine-box {
   background-color: #1d1d1d;
   border: 1px solid #3a3a3a;
   border-radius: 8px;
@@ -13,30 +26,30 @@
   color: #fff;
 }
 
-.routine-header {
+.rd-routine-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.routine-header h2 {
+.rd-routine-header h2 {
   font-size: 20px;
   margin: 0;
 }
 
-.routine-time {
+.rd-routine-time {
   font-size: 14px;
   color: #ccc;
 }
 
-.routine-date {
+.rd-routine-date {
   font-size: 14px;
   margin-bottom: 20px;
   color: #ccc;
 }
 
-.action-card {
+.rd-action-card {
   background-color: #2a2a2a;
   border-radius: 10px;
   padding: 20px;
@@ -46,12 +59,12 @@
   align-items: center;
 }
 
-.action-left {
+.rd-action-left {
   font-weight: bold;
   font-size: 16px;
 }
 
-.action-right {
+.rd-action-right {
   text-align: right;
   font-size: 14px;
   color: #ccc;
@@ -60,25 +73,43 @@
   gap: 6px;
 }
 
-.total-calories {
+.rd-total-calories {
   margin-top: 20px;
   font-size: 14px;
   color: #ccc;
 }
 
-.routine-buttons {
+.rd-routine-buttons {
   margin-top: 25px;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.edit-btn,
-.done-btn {
+.rd-edit-btn,
+.rd-done-btn {
   background-color: #eaff00;
   border: none;
   padding: 8px 20px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.rd-edit-btn:hover,
+.rd-done-btn:hover {
+  opacity: 0.7;
+  background-color: #d5ff00;
+}
+
+@media (max-width: 768px) {
+  .rd-content-wrapper{
+    border: none;
+  }
+  .rd-content-wrapper h1{
+    text-align: center;
+    font-size: 28px;
+    margin-top: -70px;
+  }
 }

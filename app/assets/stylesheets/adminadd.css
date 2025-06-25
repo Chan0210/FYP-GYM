@@ -1,41 +1,53 @@
- .content-wrapper {
+.adminadd-content-wrapper {
     max-width: 1200px;
     margin: 40px auto;
     border: 0.6px solid #5D5D5D;
     padding: 40px;
-    background-color: #000; /* 背景黑色，与页面一致 */
-    border-radius: 6px;
-  }
-
-
-body {
     background-color: #000;
+    border-radius: 6px;
     color: #fff;
     font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 600px;
+.adminadd-content-wrapper h1{
+    color: #E1FF00;
+}
+
+.adminadd-container {
+    width: 90%;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #222;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
-h1 {
+.adminadd-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.adminadd-form-group * {
+    box-sizing: border-box;
 }
 
-label {
-    margin-right: 5px;
-    margin-bottom: 5px;
+.adminadd-form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #E1FF00;
+    font-size: 16px;
 }
 
-.form-group input  {
+.adminadd-form-group input  {
     width: 75%;
     padding: 8px;
     margin-bottom: 10px;
@@ -45,33 +57,25 @@ label {
     color: #fff;
 }
 
-
-select{
-    width: 300px;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
+.adminadd-form-group input,
+.adminadd-form-group textarea,
+.adminadd-form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 6px;
     color: #fff;
+    font-size: 15px;
 }
 
-textarea {
-    width: 75%;
-    padding: 8px;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.image-upload {
+.adminadd-image-upload {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.image-box {
+.adminadd-image-box {
     width: 50%;
     height: 150px;
     background-color: #555;
@@ -81,43 +85,95 @@ textarea {
     border-radius: 5px;
 }
 
-.instruction{
+.adminadd-instruction {
     margin-top: 5px;
-}
-
-.instruction input  {
-    width: 97%;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.add-btn{
-    background-color: #ff0;
-    color: #000;
-    border: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.adminadd-instruction * {
+    box-sizing: border-box;
+}
+
+.adminadd-instruction input {
     width: 100%;
-    cursor: pointer;
+    padding: 10px 12px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.submit-btn {
-    background-color: #ff0;
-    color: #000;
+.adminadd-instruction input:focus {
+    border-color: #E1FF00;
+    outline: none;
+    box-shadow: 0 0 6px rgba(225, 255, 0, 0.4);
+}
+
+.adminadd-submit-btn {
+    background-color: #E1FF00;
+    color: black;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
+    padding: 10px 24px;
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 30px;
+    align-self: flex-end;
+    display: block;
 }
 
- .submit-btn:hover {
-    background-color: #cc0;
+.adminadd-submit-btn:hover {
+    opacity: 0.7;
+    background-color: #d5ff00;
+}
+
+/*responsible*/
+@media (max-width: 768px) {
+    .adminadd-content-wrapper {
+        border: none;
+    }
+
+    .adminadd-content-wrapper h1{
+        color: #E1FF00;
+        text-align: center;
+        margin-top: -70px;
+    }
+
+    .adminadd-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .adminadd-form-group input,
+    .adminadd-form-group select,
+    .adminadd-form-group textarea,
+    .adminadd-instruction input {
+        width: 100%;
+    }
+
+    .adminadd-image-upload {
+        flex-direction: column;
+    }
+
+    .adminadd-image-box {
+        width: 100%;
+    }
+
+    .adminadd-submit-btn {
+        width: auto;
+        margin: 30px auto 0 auto;
+    }
 }

@@ -2,58 +2,54 @@
 <html>
 <head>
   <title>Routine Checking Page</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="Routinechecking.css">
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "Routinechecking", media: "all" %>
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1 class="page-title">Routine list</h1>
-
-    <div class="filter-buttons">
+<div class="rc-content-wrapper">
+  <h1>Routine list</h1>
+  <main class="rc-main-content">
+    <div class="rc-filter-buttons">
       <button>Week</button>
       <button>Month</button>
       <button>Year</button>
       <button>All</button>
     </div>
 
-    <div class="history-section">
-      <div class="history-date">21/4/2025</div>
-      <div class="history-card">
-        <a href="routine_detail.html">
-          <div class="routine-info">
+    <div class="rc-history-section">
+      <div class="rc-history-date">21/4/2025</div>
+      <div class="rc-history-card">
+        <%= link_to routine_detail_path, class: "rc-routine-link" do %>
+          <div class="rc-routine-info">
             <strong>Routine 1</strong>
-            <div class="routine-details">
+            <div class="rc-routine-details">
               <span>1341 kcal</span>
               <span>2h 35min</span>
             </div>
           </div>
-        </a>
-        <div class="arrow">&gt;</div>
+          <div class="rc-arrow">&gt;</div>
+        <% end %>
       </div>
+    </div>
 
-      <div class="history-section">
-        <div class="history-date">21/4/2025</div>
-        <div class="history-card">
-          <a href="routine_detail.html">
-            <div class="routine-info">
-              <strong>Routine 1</strong>
-              <div class="routine-details">
-                <span>1341 kcal</span>
-                <span>2h 35min</span>
-              </div>
+    <div class="rc-history-section">
+      <div class="rc-history-date">21/4/2025</div>
+      <div class="rc-history-card">
+        <%= link_to routine_detail_path, class: "rc-routine-link" do %>
+          <div class="rc-routine-info">
+            <strong>Routine 2</strong>
+            <div class="rc-routine-details">
+              <span>980 kcal</span>
+              <span>1h 45min</span>
             </div>
-          </a>
-          <div class="arrow">&gt;</div>
-        </div>
-
-        <footer>
-          <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-        </footer>
+          </div>
+          <div class="rc-arrow">&gt;</div>
+        <% end %>
+      </div>
+    </div>
   </main>
 </div>
 </body>
-
 </html>

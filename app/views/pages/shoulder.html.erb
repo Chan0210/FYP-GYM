@@ -1,58 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shoulder Page</title>
+  <title>Shoulder</title>
   <%= stylesheet_link_tag "header", media: "all" %>
-  <%= stylesheet_link_tag "muscle", media: "all" %>
+  <%= stylesheet_link_tag "action", media: "all" %>
   <%= javascript_include_tag "https://kit.fontawesome.com/7c1ce35e86.js", crossorigin: "anonymous" %>
 </head>
 
 <body>
-<div class="content-wrapper">
-  <main class="main-content">
-    <h1>Shoulder</h1>
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to m45dbe_path do %>
-          <h3>Machine 45 Degree Back Extension</h3>
+<div class="action-content-wrapper">
+  <h1>Shoulder</h1>
+  <div class="action-action-controls">
+    <div class="action-filter-dropdown">
+      <button class="action-filter-btn">
+        Filter <i class="fa-solid fa-sliders"></i>
+      </button>
+      <ul class="action-filter-options">
+        <li><%= link_to "All",   action_path %></li>
+        <li><%= link_to "Chest",   chest_path %></li>
+        <li><%= link_to "Back",    back_path  %></li>
+        <li><%= link_to "Arm",     arm_path   %></li>
+        <li><%= link_to "Leg",     leg_path   %></li>
+        <li><%= link_to "Shoulder", shoulder_path %></li>
+      </ul>
+    </div>
+
+    <input class="action-search-bar" type="text" placeholder="Search" />
+  </div>
+
+  <div class="action-actions-grid">
+    <div class="action-actions-grid">
+      <% if @actions.present? %>
+        <% @actions.each do |action| %>
+          <%= render(ActionCardComponent.new(action: action)) %>
         <% end %>
-        <%= link_to m45dbe_path do %>
-          <%= image_tag "Machine 45 Degree Back Extension.webp", alt: "Machine 45 Degree Back Extension" %>
-        <% end %>
-        <p>Back extensions, also known as hyperextensions or sometimes “Superman,” are bodyweight exercises that target the lower back muscles. Performed on a hyperextension bench, you hook your legs into the bench,…</p>
-      </div>
-    </section>
+      <% else %>
+        <p style="text-align:center; margin-top: 20px;">No actions found for Chest.</p>
+      <% end %>
+    </div>
+  </div>
 
 
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to ds_path do %>
-          <h3>Dumbbell Superman</h3>
-        <% end %>
-        <%= link_to ds_path do %>
-          <%= image_tag "Dumbbell Superman.webp", alt: "Dumbbell Superman" %>
-        <% end %>
-        <p>The Lying Back Extension is a great way to work your lower back at home. This exercise is a slight variation of the more popular version on the hyperextension bench….</p>
-      </div>
-    </section>
-
-
-    <section class="tools-section">
-      <div class="tool-card">
-        <%= link_to url: brp_path do %>
-          <h3>Barbell Pronated Row</h3>
-        <% end %>
-        <%= link_to url: brp_path do %>
-          <%= image_tag "Barbell Pronated Row.webp", alt: "Barbell Pronated Row" %>
-        <% end %>
-        <p>…your back straight throughout the exercise. Hold this position briefly before lowering the weight back to the starting position in a controlled manner. Common mistakes and injuries Proper back posture…</p>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 GYMWIKI. All rights reserved.</p>
-    </footer>
-  </main>
 </div>
 </body>
 </html>

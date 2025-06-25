@@ -1,34 +1,33 @@
-.routine-card {
+.rr-routine-card {
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
-    width: 48%;
+    max-width: 400px;
+    width: 100%;
     height:700px;
-
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
-  .routine-wrapper {
+  .rr-routine-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px; 
     padding: 20px;
   }
-  
 
-
-  .routine-card h2 {
+  .rr-routine-card h2 {
     font-size: 1.2em;
     margin-bottom: 10px;
     color:#E0E0E0 ;
   }
 
-  .routine-card p {
+  .rr-routine-card p {
     font-size: 0.9em;
     color: #ccc;
     margin: 10px 0;
   }
 
-  .action-box {
+  .rr-action-box {
     background-color: #d9d9d9;
     height: 100px;
     margin: 15px 0;
@@ -36,12 +35,12 @@
     border: 2px solid transparent;
   }
 
-  .action-box:focus {
+  .rr-action-box:focus {
     outline: none;
     border-color: #00aaff;
   }
 
-  .description-box {
+  .rr-description-box {
     background-color: #222;
     height: 120px;
     border-radius: 5px;
@@ -52,16 +51,16 @@
     resize: none;
   }
 
-  .button-group {
+  .rr-button-group {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
   }
-.button-group button a{
+.rr-button-group button a{
   text-decoration: none;
   color: #000000;
 }
-  .btn {
+  .rr-btn {
     background-color: #d6ff00;
     border: none;
     padding: 8px 16px;
@@ -69,8 +68,41 @@
     font-weight: bold;
     cursor: pointer;
     color: black;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
   }
 
-  .btn:hover {
-    opacity: 0.8;
+  .rr-btn:hover {
+    opacity: 0.7;
+    background-color: #d5ff00;
   }
+
+  /*responsible*/
+@media (max-width: 768px) {
+  .rr-routine-card {
+    max-width: 95%;
+    padding: 14px;
+  }
+
+  .rr-routine-card h2 {
+    font-size: 1em;
+  }
+
+  .rr-routine-card p {
+    font-size: 0.8em;
+  }
+
+  .rr-action-box {
+    height: 80px;
+  }
+
+  .rr-description-box {
+    height: 90px;
+    font-size: 0.85em;
+  }
+
+  .rr-btn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}

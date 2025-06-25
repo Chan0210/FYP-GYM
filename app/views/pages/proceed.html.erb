@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Barbell Pronated Row</title>
-  <%= stylesheet_link_tag 'header', media: 'all' %>
-  <%= stylesheet_link_tag 'proceed', media: 'all' %>
+  <title>Proceed page</title>
+  <%= stylesheet_link_tag "header", media: "all" %>
+  <%= stylesheet_link_tag "proceed", media: "all" %>
   <script src="https://kit.fontawesome.com/7c1ce35e86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-
-<div class="content-wrapper">
+<div class="proceed-content-wrapper">
   <h1>Create a Routines</h1>
-
-  <div class="routines-wrapper">
-    <div class="cart-item">
-      <input type="checkbox" />
-      <div class="item-image">
-        <%= image_tag 'Barbell Bench Press.webp', alt: 'Barbell Bench Press' %>
+  <div class="proceed-routines-wrapper">
+    <div class="proceed-cart-item">
+      <div class="proceed-item-center">
+        <div class="proceed-item-title">Barbell Bench Press</div>
+        <div class="proceed-item-image"><%= image_tag "barbell_bench_press.webp" %></div>
+        <div class="proceed-reps-input">
+          <label for="reps1">Number of Reps:</label>
+          <input type="number" id="reps1" name="reps1" min="1" max="100" value="10">
+        </div>
       </div>
-      <div class="item-title">Barbell Bench Press</div>
-      <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
     </div>
 
-    <div class="cart-item">
-      <input type="checkbox" checked />
-      <div class="item-image"><i class="fa-regular fa-image"></i></div>
-      <div class="item-title">Barbell Bench Press</div>
-      <div class="delete-icon"><i class="fa-solid fa-trash"></i></div>
+    <div class="proceed-cart-item">
+      <div class="proceed-item-center">
+        <div class="proceed-item-title">Barbell Bench Press</div>
+        <div class="proceed-item-image"><%= image_tag "barbell_bench_press.webp" %></div>
+        <div class="proceed-reps-input">
+          <label for="reps1">Number of Reps:</label>
+          <input type="number" id="reps1" name="reps1" min="1" max="100" value="10">
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
+  <div class="proceed-form-group">
     <label for="Routines_Name">Name Your Routines : </label>
-    <input type="text" id="Routines_Name" name="Routines_Name" required>
+    <input type="Routines_Name" id="Routines_Name" name="Routines_Name" required>
   </div>
 
-  <div class="form-group">
+  <div class="proceed-form-group">
     <label for="Discription">Discription :</label>
     <textarea id="Discription" name="Discription" rows="2" style="resize: both;" required></textarea>
   </div>
 
-  <div class="hr"></div>
+  <div class="proceed-hr"></div>
 
   <div class="proceed-button-wrapper">
-    <%= link_to pages_routine_path, class: 'proceed-button-wrapper' do %>
+    <%= link_to routine_path do %>
       <button class="proceed-button">Proceed</button>
     <% end %>
   </div>
-
+</div>
 </body>
 </html>
